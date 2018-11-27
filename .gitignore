@@ -1,0 +1,9 @@
+*.ini
+.DS_Store
+[Bb]uild/
+dist/
+bin/
+node_modules/
+tmp/
+.c9/
+.vscode/
