@@ -4,10 +4,8 @@
   "description": "Write books in commonmark.",
   "author": "Alex Shaw <alex.shaw.as@gmail.com>",
   "private": true,
-  "license": "ISC",
-  "bin": "bin/markbook.js",
-  "main": "build/markbook.cjs.js",
-  "module": "build/markbook.esm.js",
+  "license": "MIT",
+  "bin": "bin/markbook",
   "repository": "github:Symbitic/markbook",
   "bugs": "https://github.com/Symbitic/markbook/issues",
   "keywords": [
@@ -18,17 +16,17 @@
     "book"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "bundle": "pkg .",
     "build": "rollup -c",
     "check": "snyk test",
-    "lint": "eslint \"src/**\"",
+    "lint": "eslint \"src/**/*.js\"",
     "prebundle": "npm run build",
     "pretty": "prettier --write \"src/**/*.js\"",
     "release": "standard-version",
-    "test": "ava",
+    "test": "jest",
     "watch": "rollup -c -w"
   },
   "pkg": {
@@ -36,14 +34,15 @@
       "data/**/*"
     ],
     "targets": [
-      "host"
+      "node8-linux-x64"
     ],
     "outputPath": "dist"
   },
   "prettier": {
     "endOfLine": "lf",
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "commitlint": {
     "extends": [
@@ -67,27 +66,57 @@
       "git add"
     ]
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup.js"
+  },
+  "browserslist": [
+    "node 8"
+  ],
   "dependencies": {
+    "bluebird": "^3.5.3",
+    "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "consolidate": "^0.15.1",
-    "remark": "^10.0.1"
+    "cosmiconfig": "^5.0.7",
+    "joi": "^14.3.0",
+    "mdast-util-assert": "^2.0.0",
+    "recursive-copy": "^2.0.9",
+    "remark": "^10.0.1",
+    "remark-parse": "^6.0.3",
+    "to-vfile": "^5.0.2",
+    "unified": "^7.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.1.6",
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
-    "ava": "^0.25.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.3",
+    "esdoc": "^1.1.0",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-ava": "^5.1.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-import-resolver-babel-module": "^5.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "fixturez": "^1.1.0",
     "husky": "^1.2.0",
+    "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
-    "pkg": "^4.3.4",
+    "pkg": "^4.3.5",
     "prettier": "^1.15.2",
-    "rollup": "^0.67.3",
-    "rollup-plugin-alias": "^1.4.0",
-    "rollup-plugin-executable": "^1.3.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-alias": "^1.5.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-executable": "^1.4.4",
     "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "snyk": "^1.110.2",
     "standard-version": "^4.4.0"
   }

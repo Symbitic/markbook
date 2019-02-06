@@ -2,30 +2,29 @@ env:
   node: true
   es6: true
 
-extends:
-  - 'eslint:recommended'
-  - 'plugin:ava/recommended'
-  - 'prettier'
-
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
 
 plugins:
-  - ava
+  - import
+  - jest
+
+extends:
+  - 'eslint:recommended'
+  - 'plugin:jest/recommended'
+  - 'prettier'
+  - 'standard'
+
+settings:
+  import/resolver:
+    'babel-module':
+      root: './src'
 
 rules:
-  indent:
-    - error
-    - 2
+  no-console: off
   linebreak-style:
     - error
     - unix
-  quotes:
-    - error
-    - single
-  semi:
-    - error
-    - never
   prefer-const:
     - error
