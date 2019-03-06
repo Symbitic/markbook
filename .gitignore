@@ -7,3 +7,6 @@ node_modules/
 tmp/
 .c9/
 .vscode/
+tests/fixtures/*/book
+/markbook
+/markbook.exe

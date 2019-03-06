@@ -6,7 +6,7 @@
  * table-of-contents in a markdown file?
  */
 
-import { reject } from 'common/errors'
+import { reject } from 'common/errors.js'
 import markdown from 'remark-parse'
 import path from 'path'
 import unified from 'unified'
@@ -109,12 +109,7 @@ const compose = (...fns) =>
  * Method for flattening nested arrays. Intended for .reduce()
  */
 const flattener = (acc, val) =>
-  Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val)
-
-/**
- * Flatten nested arrays.
- */
-const flatten = list => list.reduce(flattener, [])
+  Array.isArray(val) ? acc.concat(val.reduce(flattener, [])) : acc.concat(val)
 
 /**
  * Remove unneeded properties from links arrays.

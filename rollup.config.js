@@ -1,12 +1,9 @@
 import babel from 'rollup-plugin-babel'
 import { builtinModules } from 'module'
-// import commonjs from 'rollup-plugin-commonjs'
 import executable from 'rollup-plugin-executable'
 import json from 'rollup-plugin-json'
 import pkg from './package.json'
 import resolve from 'rollup-plugin-node-resolve'
-
-// commonjs({ include: 'node_modules/**' }),
 
 const external = [...builtinModules, ...Object.keys(pkg.dependencies)]
 

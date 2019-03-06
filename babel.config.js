@@ -1,20 +1,8 @@
-module.exports = function (api) {
-  api.cache.using(() => process.env.NODE_ENV)
-
-  const modules = api.env() === 'test' ? 'commonjs' : false
+module.exports = api => {
+  api.cache.using(() => process.env.NODE_ENV === 'development')
 
   return {
-    presets: [
-      [
-        '@babel/env',
-        {
-          modules,
-          targets: {
-            node: '8'
-          }
-        }
-      ]
-    ],
+    presets: ['@babel/preset-env'],
     plugins: [['module-resolver', { root: './src' }]],
     comments: false
   }
