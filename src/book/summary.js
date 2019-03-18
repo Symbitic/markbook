@@ -41,14 +41,14 @@ const split = tree => {
   const headers = tree.children.filter((node, i) => {
     if (isDone) {
       return false
-    } else if (node.type === 'heading') {
-      return true
-    } else {
-      index = i
-      isDone = true
-
-      return false
     }
+    if (node.type === 'heading') {
+      return true
+    }
+    index = i
+    isDone = true
+
+    return false
   })
 
   isDone = false
@@ -56,13 +56,13 @@ const split = tree => {
   const prefixes = tree.children.slice(index).filter((node, i) => {
     if (isDone) {
       return false
-    } else if (node.type === 'paragraph') {
-      return true
-    } else {
-      isDone = true
-      index = index + i
-      return false
     }
+    if (node.type === 'paragraph') {
+      return true
+    }
+    isDone = true
+    index += i
+    return false
   })
 
   isDone = false
@@ -70,13 +70,13 @@ const split = tree => {
   const lists = tree.children.slice(index).filter((node, i) => {
     if (isDone) {
       return false
-    } else if (node.type === 'list') {
-      return true
-    } else {
-      isDone = true
-      index = index + i
-      return false
     }
+    if (node.type === 'list') {
+      return true
+    }
+    isDone = true
+    index += i
+    return false
   })
 
   isDone = false
@@ -84,13 +84,13 @@ const split = tree => {
   const suffixes = tree.children.slice(index).filter((node, i) => {
     if (isDone) {
       return false
-    } else if (node.type === 'paragraph') {
-      return true
-    } else {
-      isDone = true
-      index = index + i
-      return false
     }
+    if (node.type === 'paragraph') {
+      return true
+    }
+    isDone = true
+    index += i
+    return false
   })
 
   return {
@@ -178,9 +178,8 @@ const findParagraphs = (items, i = 0) =>
         ...val,
         level: i / 2
       })
-    } else {
-      return acc.concat(findParagraphs(val.children, i + 1))
     }
+    return acc.concat(findParagraphs(val.children, i + 1))
   }, [])
 
 /**
@@ -198,11 +197,11 @@ const flattenLinks = items =>
         url: val.children[0].url,
         level: val.level
       })
-    } else if (Array.isArray(val.children)) {
-      return acc.concat(flattenLinks(val.children))
-    } else {
-      return acc.concat(val)
     }
+    if (Array.isArray(val.children)) {
+      return acc.concat(flattenLinks(val.children))
+    }
+    return acc.concat(val)
   }, [])
 
 /**

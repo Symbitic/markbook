@@ -13,7 +13,7 @@ export default function(dir, options = {}) {
   if (dir) {
     status(`Building in ${dir}`)
   } else {
-    status(`Building in default dir`)
+    status('Building in default dir')
   }
   if (options.open) {
     status('Opening in web browser')

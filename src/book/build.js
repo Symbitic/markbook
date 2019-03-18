@@ -1,5 +1,5 @@
-import load from './load.js'
 import render from 'renderer/render.js'
+import load from './load.js'
 
 /**
  * Begin building a book.

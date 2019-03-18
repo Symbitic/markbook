@@ -1,16 +1,16 @@
-import deflist from './remark-deflist.js'
 import frontmatter from 'remark-frontmatter'
 import html from 'rehype-stringify'
 import include from 'remark-include'
 import katex from 'rehype-katex'
 import math from 'remark-math'
 import markdown from 'remark-parse'
-import meta from './remark-meta.js'
 import plantuml from 'remark-plantuml'
 import remark2rehype from 'remark-rehype'
-import rename from './remark-rename.js'
 import unified from 'unified'
 import yamlConfig from 'remark-yaml-config'
+import rename from './remark-rename.js'
+import meta from './remark-meta.js'
+import deflist from './remark-deflist.js'
 
 const createProcessor = () =>
   unified()
