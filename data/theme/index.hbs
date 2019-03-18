@@ -1,17 +1,74 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <!-- Book generated using Markbook -->
+    <!-- Generated using Markbook -->
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff" />
+    {{#if root}}<base href="{{ root }}">{{/if}}
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+    <link rel="stylesheet" href="markbook.css">
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <main>
-      {{{ content }}}
-    </main>
+    <div class="columns is-mobile is-vcentered">
+      <!-- Show/Hide Searchbar -->
+      <div class="column is-narrow">
+        <span aria-controls="searchbar" aria-expanded="false" aria-label="Toggle Searchbar" class="icon is-medium">
+          <span aria-hidden="true" class="fas fa-search"></span>
+        </span>
+      </div>
+      
+      <!-- Chapter Title -->
+      <div class="column is-wrapped has-text-centered">
+        <p class="title has-wrapped-overflow has-text-grey-lighter">
+          {{ book_title }}
+        </p>
+      </div>
+
+      <!-- Show/Hide Table of Contents -->
+      <div class="column has-text-left is-narrow">
+        <span aria-controls="sidebar" aria-label="Toggle Table of Contents" class="icon is-medium">
+          <span aria-hidden="true" class="fas fa-bars"></span>
+        </span>
+      </div>
+    </div>
+    
+    <section class="section">
+      <div class="columns">
+        <div class="column is-2 is-paddingless is-info">
+          <aside class="is-medium menu" aria-label="Table of Contents">
+            <ul class="menu-list">
+              {{#each toc.prefix}}
+              <li><a href="{{url}}">{{title}}</a></li>
+              {{/each}}
+              {{#each toc.chapters}}
+              <li><a href="{{url}}">
+                <strong aria-hidden="true">{{ch}}</strong>
+                {{title}}
+              </a></li>
+              {{/each}}
+              {{#each toc.suffix}}
+              <li><a href="{{url}}">{{title}}</a></li>
+              {{/each}}
+
+            </ul>
+          </aside>
+        </div>
+        <div class="column is-10">
+          <div class="content is-medium">
+            <div class="container">
+              {{{ content }}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="markbook.js"></script>
   </body>
 </html>

@@ -2,12 +2,12 @@
  * Build the finished book.
  */
 
-import build from 'book/build'
-import { handleErrors } from 'common/errors'
 import path from 'path'
-import { status } from 'common/log'
+import build from 'book/build.js'
+import { handleErrors } from 'common/errors.js'
+import { status } from 'common/log.js'
 
-export default function (dir, options = {}) {
+export default function(dir, options = {}) {
   options.open = options.open || false
   const fulldir = path.resolve(dir || '.')
   if (dir) {
@@ -20,5 +20,5 @@ export default function (dir, options = {}) {
   }
 
   // TODO: Should 'open' be in book/, html/, or server/
-  return build(fulldir).catch(handleErrors('Error building book'))
+  return build(fulldir).catch(handleErrors)
 }

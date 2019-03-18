@@ -6,15 +6,18 @@ parserOptions:
   ecmaVersion: 2018
   sourceType: module
 
-plugins:
-  - import
-  - jest
-
 extends:
   - 'eslint:recommended'
   - 'plugin:jest/recommended'
-  - 'prettier'
   - 'standard'
+  - 'prettier'
+  - 'prettier/standard'
+
+plugins:
+  - import
+  - jest
+  - prettier
+  - standard
 
 settings:
   import/resolver:
@@ -26,5 +29,6 @@ rules:
   linebreak-style:
     - error
     - unix
-  prefer-const:
-    - error
+  prefer-const: error
+  space-before-function-paren: off
+  prettier/prettier: error

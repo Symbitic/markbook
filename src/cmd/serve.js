@@ -3,7 +3,7 @@ import log from 'common/log'
 /**
  * Run a web server for previewing a book.
  */
-export default function (dir, options) {
+export default function(dir, options) {
   if (dir) {
     log.status('Serving %s', dir)
   } else {

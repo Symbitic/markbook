@@ -4,6 +4,8 @@
  *
  * Who's bright idea was it to use a markdown file to specify the
  * table-of-contents in a markdown file?
+ *
+ * @todo Might need to add assert that level is never bigger than 2.
  */
 
 import { reject } from 'common/errors.js'
@@ -172,7 +174,10 @@ const extractSuffix = items =>
 const findParagraphs = (items, i = 0) =>
   items.reduce((acc, val) => {
     if (val.type === 'paragraph') {
-      return acc.concat({ ...val, level: i / 2 })
+      return acc.concat({
+        ...val,
+        level: i / 2
+      })
     } else {
       return acc.concat(findParagraphs(val.children, i + 1))
     }
@@ -255,7 +260,7 @@ const parse = file =>
  * @param {!string} filename - Path to `SUMMARY.md`.
  * @returns {Summary} An object representing the books contents.
  */
-export default function (config) {
+export default function(config) {
   const summary = path.join(config.source, 'SUMMARY.md')
 
   return readFile(summary)
