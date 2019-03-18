@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+
+# [0.2.0](https://github.com/Symbitic/markbook/compare/v0.1.0...v0.2.0) (2019-03-18)
+
+### Features
+
+-   first public release ([cf81009](https://github.com/Symbitic/markbook/commit/cf81009))
+-   first working version ([2d22205](https://github.com/Symbitic/markbook/commit/2d22205))
+
 <a name="0.1.0"></a>
 
 # [0.1.0](https://github.com/Symbitic/markbook/compare/v0.0.0...v0.1.0) (2019-02-06)
