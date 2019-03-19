@@ -6,9 +6,11 @@ import { error } from './log.js'
 /**
  * Reject with the given reason.
  * @param {string} msg - Error message.
+ * @param {Error} err - Original error object (used for debugging in Travis).
  * @return A Promise that is rejected with the given reason.
  */
-export const reject = msg => Promise.reject(new Error(msg))
+export const reject = (msg, err) =>
+  Promise.reject(new Error(process.env.CI === true ? err || msg : msg))
 
 /**
  * Generic rejection handler (insert dating joke here).
