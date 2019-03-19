@@ -26,7 +26,12 @@ matrix:
 
 script:
   - npm run test
-  - npm run doc
+  - [ "$TRAVIS_OS_NAME" != "windows" ] && npm run doc
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
 
 deploy:
   provider: pages
