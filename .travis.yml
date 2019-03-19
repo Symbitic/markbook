@@ -14,7 +14,8 @@ os:
 cache: npm
 
 branches:
-  except:
+  only:
+    - master
     - /^v\d+\.\d+\.\d+$/
 
 env:
@@ -29,6 +30,7 @@ matrix:
 script:
   - npm run test
   - npm run doc
+  - if [[ $TRAVIS_OS_NAME = linux -a $TRAVIS_NODE_VERSION = 8 -a $TRAVIS_BRANCH = $TRAVIS_TAG ]]; then npm run bundle; fi
 
 notifications:
   email:
@@ -36,13 +38,25 @@ notifications:
     on_failure: change
 
 deploy:
-  provider: pages
-  local-dir: doc/book
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    repo: Symbitic/markbook
-    branch: master
-    node: '8'
-    condition: $TRAVIS_OS_NAME = linux
+  - provider: releases
+    file_glob: true
+    file: "markbook-*"
+    skip-cleanup: true
+    api_key:
+      secure: "RQApes+OcqrfbtpA12C/KB2b5RpiasWqUGM4hahLUNQF30pcRyyZEGfSvf2q4ZM9T8IMs1a+PVGfghZcrIEA/DLoxQc8AkfVv+rCU/b4qTE11jRsPaXoUll5RIZicy6H+qlvlq3t8f60w0SXw9r74rrgqEvfOygP11m9feAZwEn94VppJTmz3lb3r/TYARMMV0iirjkPihk0cdnoSrJAxdW5N+evWWyEepu4QUff2oyWRhpxKkf07CA90Hlp9lKZX3MDF/YFgIgRedAFP3P0E3Jo5s0VC/WerG6KE1WYQIcY/1EoUYs0btyf6NQJaC7zNnhDwu4tz5oSB2m8/5Fd1tp0c4kmCzwOWRWoCc3bG1GdKaf0AGbPGMkMxeqoYTKqUuxOoVFOwzPZT8TKz1HltTA0cT2i7/CnOhfsnGybJ3EoW/wJPZUBXM5q/MKxXSM9vR+C3nU31QVMuo6WZssVZJgthpNOIqS0C/GCaXp9HOoiu6++4x0vsIMyI3V7Ek6emoH1YXI2QQqXNDoj5L9kNXzLMShgtjvuR6H3o40VIgy9y4CZV/OorosOOe+BlOrc/0OMwhfRFhEjdQRXxbtkhTjZNhjdXDr6ipN57Yzu0/yBLSuv5SMmFFM/DoFXLqsL0N5Cgj3csq9fC+6dVXd4ZOQnpLDDHal2hB75+OKqa3M="
+    on:
+      repo: Symbitic/markbook
+      branch: master
+      node: '8'
+      condition: $TRAVIS_OS_NAME = linux
+      tags: true
+  - provider: pages
+    local-dir: doc/book
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    on:
+      repo: Symbitic/markbook
+      branch: master
+      node: '8'
+      condition: $TRAVIS_OS_NAME = linux
