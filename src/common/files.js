@@ -25,7 +25,11 @@ export const readVFile = filename =>
 export const writeFile = (filename, ...args) =>
   mkdir(path.dirname(filename))
     .then(() => writeFileEx(filename, ...args))
-    .catch(err => reject(`Error writing to ${filename}`, err))
+    .catch(err => {
+      console.error('Error writing to', filename)
+      console.error(err)
+      process.exit(1)
+    })
 
 export const mkdir = dir => mkdirEx(dir, { recursive: true })
 
