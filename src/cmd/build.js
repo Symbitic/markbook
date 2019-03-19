@@ -6,10 +6,6 @@ import path from 'path'
 import build from 'book/build.js'
 import { handleErrors } from 'common/errors.js'
 import { status } from 'common/log.js'
-import opn from 'opn'
-
-const open = enable => ({ destination }) =>
-  enable && opn(path.join(destination, 'index.html'))
 
 export default function(dir, options = {}) {
   options.open = options.open || false
@@ -23,7 +19,5 @@ export default function(dir, options = {}) {
     status('Opening in web browser')
   }
 
-  return build(fulldir)
-    .then(open(options.open))
-    .catch(handleErrors)
+  return build(fulldir).catch(handleErrors)
 }
