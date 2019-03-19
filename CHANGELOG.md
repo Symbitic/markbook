@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+
+# [1.1.0](https://github.com/Symbitic/markbook/compare/v1.0.0...v1.1.0) (2019-03-19)
+
+### Bug Fixes
+
+-   add debug info for travis ([6d51392](https://github.com/Symbitic/markbook/commit/6d51392))
+-   disable build.spec.js for now ([4744195](https://github.com/Symbitic/markbook/commit/4744195))
+-   fix mkdir -p in Node 8 ([b7b8859](https://github.com/Symbitic/markbook/commit/b7b8859))
+
+### Features
+
+-   support 'open' flag ([ef9d940](https://github.com/Symbitic/markbook/commit/ef9d940))
+
 <a name="1.0.0"></a>
 
 # [1.0.0](https://github.com/Symbitic/markbook/compare/v0.2.0...v1.0.0) (2019-03-18)
