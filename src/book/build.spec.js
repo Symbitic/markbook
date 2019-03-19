@@ -1,9 +1,9 @@
 /* global expect, fixtures */
 import build from './build'
 
-describe('book.build', () => {
-  it.skip('should parse correctly', () => {
+describe('build', () => {
+  it('should build correctly', () => {
     const basic = fixtures('basic')
-    expect(build(basic)).resolves.toBeUndefined()
+    expect(build(basic)).resolves.toBeDefined()
   })
 })

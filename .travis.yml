@@ -23,10 +23,12 @@ env:
 
 matrix:
   fast_finish: true
+  allow_failures:
+    - os: windows
 
 script:
   - npm run test
-  - if [ "$TRAVIS_OS_NAME" != "windows" ]; then npm run doc; fi
+  - npm run doc
 
 notifications:
   email:
