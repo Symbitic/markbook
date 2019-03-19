@@ -3,9 +3,8 @@ language: node_js
 sudo: false
 
 node_js:
-  - "8"
-  - "10"
-  - "node"
+  - 8
+  - stable
 
 os:
   - linux
@@ -18,8 +17,25 @@ branches:
   except:
     - /^v\d+\.\d+\.\d+$/
 
+env:
+  global:
+    - secure: "OOot/roGPfl+dkDS2Mz1OkckNVoU8VPa1r5oJoOuQchsm9ryjjFibg/Tv/aBThkwd1yGWcheivU4nHOw+yh6Nmqfy1I01AMcQWIompuV/LOc4yYKhnA5oCMF24vYXalEkWefsSAXG45b4ZI3FxH7dTDfMt+EOWLHQCDiW0z4YKVc8/vbFDnMT3eSbMXhmlIU0YiKCp/UmifSKLGbP1AkBziuiLPpveVw4PsLD6a5JipD4auUcOlbGTf8GiZHY1Fjb1QwQMNhAeT2lgF5cT4PCMH8lqJtf9800IqySdhTfLCu8Wd1uoVyt56VzO1rypi3YIEodRKVR/vcWD0RK/abdc4pHEYp/+tUrdVqDAPM2xs8UfpwW2B7y0DoNreSWaEntuYgWmLh1ca76QSk3YbMhCcuwcGYxm/ZNrIOGJSoAUy9K+koBdezMFI3DKsiw0NYxOF3ICMPaeNTYL/mxZUd8XqQnKyheRPy9xMR4ZNrO/XfOUnab7jeheeQ28BNDDL3IZi9H/D7EIZfXDoYKE4ZrzFzKLLPj9xvcwfzQQuQ00NiW0tHXwKHBioJwEqsI6bo2ZIPxE2Cpn/LBW9n/HmHBVcgBbYSuUjv49u5I88OR46JBPA+sT1lULlX9sT3RyYKg4s1fTXitdGjp+D5y+omzzJ/wngonOz/PeaTIBHIZ40="
+
 matrix:
   fast_finish: true
 
 script:
   - npm run test
+  - npm run doc
+
+deploy:
+  provider: pages
+  local-dir: doc/book
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    repo: Symbitic/markbook
+    branch: master
+    node: '8'
+    condition: $TRAVIS_OS_NAME = linux
