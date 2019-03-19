@@ -86,6 +86,7 @@
     "handlebars": "^4.1.1",
     "joi": "^14.3.0",
     "js-yaml": "^3.12.2",
+    "make-dir": "^2.1.0",
     "mdast-util-to-string": "^1.0.5",
     "rehype-katex": "^1.2.0",
     "rehype-stringify": "^5.0.0",

@@ -1,4 +1,5 @@
 import fs from 'fs'
+import mkdir from 'make-dir'
 import path from 'path'
 import util from 'util'
 import vfile from 'to-vfile'
@@ -6,7 +7,6 @@ import { reject } from './errors.js'
 
 const readFileEx = util.promisify(fs.readFile)
 const writeFileEx = util.promisify(fs.writeFile)
-const mkdirEx = util.promisify(fs.mkdir)
 const readdirEx = util.promisify(fs.readdir)
 const stat = util.promisify(fs.stat)
 const pass = () => true
@@ -30,8 +30,6 @@ export const writeFile = (filename, ...args) =>
       console.error(err)
       process.exit(1)
     })
-
-export const mkdir = dir => mkdirEx(dir, { recursive: true })
 
 export const readdir = dir =>
   readdirEx(dir)
