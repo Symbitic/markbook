@@ -26,7 +26,7 @@ matrix:
 
 script:
   - npm run test
-  - [ "$TRAVIS_OS_NAME" != "windows" ] && npm run doc
+  - if [ "$TRAVIS_OS_NAME" != "windows" ]; then npm run doc; fi
 
 notifications:
   email:
