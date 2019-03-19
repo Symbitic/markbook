@@ -74,5 +74,6 @@ export default async function render(config) {
     .then(theme => renderFiles(config, processor, theme, files))
     .then(() => {
       status('Done')
+      return config
     })
 }
