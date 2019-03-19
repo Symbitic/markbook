@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Generated using Markbook -->
+    <meta charset="UTF-8">
+    <title>Markbook - CommonMark</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+    <base href="..">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+    <link rel="stylesheet" href="markbook.css">
+  </head>
+  <body>
+    <div class="columns is-mobile is-vcentered">
+      <!-- Show/Hide Searchbar -->
+      <div class="column is-narrow">
+        <span aria-controls="searchbar" aria-expanded="false" aria-label="Toggle Searchbar" class="icon is-medium">
+          <span aria-hidden="true" class="fas fa-search"></span>
+        </span>
+      </div>
+      
+      <!-- Chapter Title -->
+      <div class="column is-wrapped has-text-centered">
+        <p class="title has-wrapped-overflow has-text-grey-lighter">
+          Markbook
+        </p>
+      </div>
+
+      <!-- Show/Hide Table of Contents -->
+      <div class="column has-text-left is-narrow">
+        <span aria-controls="sidebar" aria-label="Toggle Table of Contents" class="icon is-medium">
+          <span aria-hidden="true" class="fas fa-bars"></span>
+        </span>
+      </div>
+    </div>
+    
+    <section class="section">
+      <div class="columns">
+        <div class="column is-2 is-paddingless is-info">
+          <aside class="is-medium menu" aria-label="Table of Contents">
+            <ul class="menu-list">
+              <li><a href="index.html">Markbook</a></li>
+              <li><a href="cli/index.html">
+                <strong aria-hidden="true">1.</strong>
+                Command Line Tool
+              </a></li>
+              <li><a href="cli/build.html">
+                <strong aria-hidden="true">1.1</strong>
+                build
+              </a></li>
+              <li><a href="config/index.html">
+                <strong aria-hidden="true">2.</strong>
+                Configuration
+              </a></li>
+              <li><a href="config/summary.html">
+                <strong aria-hidden="true">2.1</strong>
+                SUMMARY.md
+              </a></li>
+              <li><a href="writing/index.html">
+                <strong aria-hidden="true">3.</strong>
+                Writing
+              </a></li>
+              <li><a href="writing/commonmark.html">
+                <strong aria-hidden="true">3.1</strong>
+                CommonMark
+              </a></li>
+              <li><a href="writing/extensions.html">
+                <strong aria-hidden="true">3.2</strong>
+                Markbook-Specific Extensions
+              </a></li>
+              <li><a href="contributors.html">Contributors</a></li>
+
+            </ul>
+          </aside>
+        </div>
+        <div class="column is-10">
+          <div class="content is-medium">
+            <div class="container">
+              <h1>CommonMark</h1>
+            <p>Although the term <em>Markdown</em> is probably more familiar to most users, Markbook
+            actually uses <em>CommonMark</em>.</p>
+            <p>CommonMark is a formally defined standard, unlike Markdown, which was originally
+            nothing more than a perl script for a format that contained numerous
+            parsing errors that newer implementations were forced to replicate.</p>
+            <p>CommonMark represented an industry-wide attempt to define a common markdown
+            format, and included efforts by the creators of StackEdit and Pandoc. GitHub
+            rewrote their GitHub Flavored Markdown (GFM) format to be an extension of
+            CommonMark.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="markbook.js"></script>
+  </body>
+</html>
