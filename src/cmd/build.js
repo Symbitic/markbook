@@ -6,6 +6,7 @@ import path from 'path'
 import build from 'book/build.js'
 import { handleErrors } from 'common/errors.js'
 import { status } from 'common/log.js'
+import open from 'common/open.js'
 
 export default function(dir, options = {}) {
   options.open = options.open || false
@@ -19,5 +20,11 @@ export default function(dir, options = {}) {
     status('Opening in web browser')
   }
 
-  return build(fulldir).catch(handleErrors)
+  return build(fulldir)
+    .then(
+      config =>
+        options.open &&
+        open(`file://${path.join(config.destination, 'index.html')}`)
+    )
+    .catch(handleErrors)
 }
