@@ -3,16 +3,19 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="1.2.0"></a>
-
 # [1.2.0](https://github.com/Symbitic/markbook/compare/v1.1.0...v1.2.0) (2019-03-20)
+
 
 ### Bug Fixes
 
--   disable open-in-browser because opn can't be bundled ([469893b](https://github.com/Symbitic/markbook/commit/469893b))
+* disable open-in-browser because opn can't be bundled ([469893b](https://github.com/Symbitic/markbook/commit/469893b))
+
 
 ### Features
 
--   re-add open flag ([0388d1d](https://github.com/Symbitic/markbook/commit/0388d1d))
+* re-add open flag ([0388d1d](https://github.com/Symbitic/markbook/commit/0388d1d))
+
+
 
 <a name="1.1.0"></a>
 
