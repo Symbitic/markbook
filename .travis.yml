@@ -30,7 +30,7 @@ matrix:
 script:
   - npm run test
   - npm run doc
-  - if [[ $TRAVIS_OS_NAME = linux -a $TRAVIS_NODE_VERSION = 8 -a $TRAVIS_BRANCH = $TRAVIS_TAG ]]; then npm run bundle; fi
+  - if [[ $TRAVIS_OS_NAME = linux && $TRAVIS_NODE_VERSION = 8 && $TRAVIS_BRANCH = $TRAVIS_TAG ]]; then npm run bundle; fi
 
 notifications:
   email:
