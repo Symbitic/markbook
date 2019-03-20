@@ -12,6 +12,11 @@ Markbook allows full books to be written in CommonMark. Similar in concept to [G
 
 ## Getting Started
 
+Markbook provides binary files (compiled using <https://github.com/zeit/pkg>) for Windows, macOS, and Linux.
+Download the latest release at <https://github.com/Symbitic/markbook/releases/latest>.
+
+Alternately, Markbook can be built manually:
+
     git clone https://github.com/Symbitic/markbook.git
     cd markbook
     npm install
