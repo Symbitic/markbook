@@ -3,7 +3,10 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Travis](https://img.shields.io/travis/Symbitic/markbook.svg?style=flat-square)](https://travis-ci.org/Symbitic/markbook)
-
+[![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![github issues](https://img.shields.io/github/issues/symbitic/markbook.svg?style=flat-square)](https://github.com/Symbitic/markbook/issues)
+[![stars](https://img.shields.io/github/stars/symbitic/markbook.svg?style=flat-square)](https://github.com/Symbitic/markbook)
+[![forks](https://img.shields.io/github/forks/symbitic/markbook.svg?style=flat-square)](https://github.com/Symbitic/markbook)
 > Write books in CommonMark.
 
 Markbook allows full books to be written in CommonMark. Similar in concept to [GitBook][1] or [mdBook][2], it has a vastly different philosophy.

@@ -9,6 +9,7 @@ import { readVFile, writeFile } from 'common/files.js'
 import createTheme from './theme.js'
 import createProcessor from './markdown.js'
 import createToc from './toc.js'
+import search from './search.js'
 
 const renderFile = (file, processor) => readVFile(file).then(processor.process)
 
@@ -35,7 +36,6 @@ function write(file, config, template, vfile) {
   const data = template({
     ...vfile.data,
     book_title: config.title,
-    // toc: createToc(config),
     ...config.toc,
     toc: config.toc,
     content,
@@ -72,6 +72,7 @@ export default async function render(config) {
 
   return createTheme(config)
     .then(theme => renderFiles(config, processor, theme, files))
+    .then(() => search(config))
     .then(() => {
       status('Done')
       return config

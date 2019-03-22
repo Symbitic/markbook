@@ -1,14 +1,26 @@
-import log from 'common/log'
+import path from 'path'
+import build from 'book/build.js'
+import createServer from 'server/serve.js'
+import { handleErrors } from 'common/errors.js'
+import { status } from 'common/log.js'
 
 /**
  * Run a web server for previewing a book.
  */
 export default function(dir, options) {
+  const fulldir = path.resolve(dir || '.')
   if (dir) {
-    log.status('Serving %s', dir)
+    status(`Serving ${dir}`)
   } else {
-    log.status('Serving the default directory')
+    status('Serving the default dir')
   }
-  log.status('Hostname: %s', options.hostname)
-  log.status('Port: %d', options.port)
+
+  status(`Hostname: ${options.hostname}`)
+  status(`Port: ${options.port}`)
+
+  const serve = createServer(options.hostname, options.port)
+
+  return build(fulldir)
+    .then(serve)
+    .catch(handleErrors)
 }

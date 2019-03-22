@@ -25,13 +25,13 @@ commander.on('--help', () => {
 
 commander
   .command('build [dir]')
-  .description('Build a book from its markdown sources')
+  .description('Build a book')
   .option('-o, --open', 'Open in the book in a web browser')
   .action(build)
 
 commander
   .command('clean [dir]')
-  .description('Create a new book')
+  .description("Delete a book's outputs")
   .action(clean)
 
 commander
@@ -43,7 +43,7 @@ commander
 commander
   .command('serve [dir]')
   .description(
-    'Serves a book at http://localhost:5050, and rebuilds it on changes'
+    'Serves a book at http://localhost:8080, and rebuilds it on changes'
   )
   .option(
     '-h, --hostname [hostname]',
@@ -52,17 +52,11 @@ commander
   )
   .option(
     '-p, --port [port]',
-    'Port to listen on for HTTP connections [5050]',
+    'Port to listen on for HTTP connections [8080]',
     parseInt,
-    5050
+    8080
   )
   .option('-o, --open', 'Open in the book in a web browser')
-  .option(
-    '-w, --websocket-port [port]',
-    'Port to listen on for WebSockets [5051]',
-    parseInt,
-    5051
-  )
   .action(serve)
 
 commander.parse(process.argv)

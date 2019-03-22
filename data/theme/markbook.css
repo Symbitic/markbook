@@ -51,7 +51,28 @@ a:hover {
   color: blue;
 }
 
-.content p {
-  font-family: 'Crimson Text', serif;
-  /* font-family: "Roboto", sans-serif; */
+.hidden {
+  display: none;
+}
+
+.container > .input:first-child {
+  margin-bottom: 0.5em;
+}
+
+.container > h1:nth-child(3) {
+  margin-top: 0;
+}
+
+#search-results p {
+  margin-bottom: 0px;
+}
+
+#search-results li {
+  margin: 0;
+}
+
+#search-results ul {
+  list-style: none;
+  margin-left: 0px;
+  margin-top: 0px;
 }
