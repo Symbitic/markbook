@@ -3,7 +3,6 @@ module.exports = api => {
 
   return {
     presets: ['@babel/preset-env'],
-    plugins: [['module-resolver', { root: './src' }]],
     comments: false
   }
 }

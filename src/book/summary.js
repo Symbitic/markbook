@@ -8,7 +8,7 @@
  * @todo Might need to add assert that level is never bigger than 2.
  */
 
-import { reject } from 'common/errors.js'
+import { reject } from '../common/errors'
 import markdown from 'remark-parse'
 import path from 'path'
 import unified from 'unified'

@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars'
-import { copyDir, createPath, readFile } from 'common/files.js'
+import { copyDir, createPath, readFile } from '../common/files'
 
 export default function createTheme(config) {
   const index = createPath('theme/index.hbs')

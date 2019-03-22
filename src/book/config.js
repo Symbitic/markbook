@@ -13,7 +13,7 @@
  */
 
 import * as Joi from 'joi'
-import { reject } from 'common/errors.js'
+import { reject } from '../common/errors'
 import path from 'path'
 
 const schema = Joi.object({

@@ -1,5 +1,5 @@
 /* global expect, fixtures */
-import summary from './summary.js'
+import summary from './summary'
 
 describe('summary', () => {
   it('should parse basic correctly', () => {

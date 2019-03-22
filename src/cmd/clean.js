@@ -1,9 +1,9 @@
-import { handleErrors } from 'common/errors.js'
-import load from 'book/load.js'
+import { handleErrors } from '../common/errors'
+import load from '../book/load'
 import path from 'path'
 import { promisify } from 'util'
 import rimraf from 'rimraf'
-import { status } from 'common/log.js'
+import { status } from '../common/log'
 
 const rm = promisify(rimraf)
 // return build(fulldir).catch(handleErrors('Error building book'))

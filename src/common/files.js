@@ -3,7 +3,7 @@ import mkdir from 'make-dir'
 import path from 'path'
 import util from 'util'
 import vfile from 'to-vfile'
-import { reject } from './errors.js'
+import { reject } from './errors'
 
 const readFileEx = util.promisify(fs.readFile)
 const writeFileEx = util.promisify(fs.writeFile)

@@ -1,8 +1,8 @@
 import path from 'path'
-import build from 'book/build.js'
-import createServer from 'server/serve.js'
-import { handleErrors } from 'common/errors.js'
-import { status } from 'common/log.js'
+import build from '../book/build'
+import createServer from '../server/serve'
+import { handleErrors } from '../common/errors'
+import { status } from '../common/log'
 
 /**
  * Run a web server for previewing a book.

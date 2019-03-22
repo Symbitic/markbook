@@ -1,4 +1,4 @@
-import { status } from 'common/log'
+import { status } from '../common/log'
 
 /**
  * Create a new markbook.

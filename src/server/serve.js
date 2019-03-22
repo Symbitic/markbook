@@ -1,7 +1,7 @@
 import Koa from 'koa'
 import { PassThrough } from 'stream'
 import send from 'koa-send'
-import { status } from 'common/log.js'
+import { status } from '../common/log'
 
 const createServer = (hostname, port) => config => {
   const app = new Koa()

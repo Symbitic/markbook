@@ -1,5 +1,5 @@
 /* global expect, fixtures */
-import load from './load.js'
+import load from './load'
 
 describe('load', () => {
   it('should parse basic correctly', () => {

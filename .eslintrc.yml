@@ -19,11 +19,6 @@ plugins:
   - prettier
   - standard
 
-settings:
-  import/resolver:
-    'babel-module':
-      root: './src'
-
 rules:
   no-console: off
   linebreak-style:

@@ -1,7 +1,7 @@
 /**
  * Error-handling related functions.
  */
-import { error } from './log.js'
+import { error } from './log'
 
 /**
  * Reject with the given reason.

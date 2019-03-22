@@ -4,12 +4,12 @@
  * @todo Use serial-promise code from home.
  */
 import path from 'path'
-import { status } from 'common/log.js'
-import { readVFile, writeFile } from 'common/files.js'
-import createTheme from './theme.js'
-import createProcessor from './markdown.js'
-import createToc from './toc.js'
-import search from './search.js'
+import { status } from '../common/log'
+import { readVFile, writeFile } from '../common/files'
+import createTheme from './theme'
+import createProcessor from './markdown'
+import createToc from './toc'
+import search from './search'
 
 const renderFile = (file, processor) => readVFile(file).then(processor.process)
 
