@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/Symbitic/markbook/compare/v1.2.0...v1.3.0) (2019-03-22)
 
-
 ### Features
 
 * add serve ([3a6548c](https://github.com/Symbitic/markbook/commit/3a6548c))
-
-
 
 <a name="1.2.0"></a>
 
@@ -18,11 +15,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   disable open-in-browser because opn can't be bundled ([469893b](https://github.com/Symbitic/markbook/commit/469893b))
+* disable open-in-browser because opn can't be bundled ([469893b](https://github.com/Symbitic/markbook/commit/469893b))
 
 ### Features
 
--   re-add open flag ([0388d1d](https://github.com/Symbitic/markbook/commit/0388d1d))
+* re-add open flag ([0388d1d](https://github.com/Symbitic/markbook/commit/0388d1d))
 
 <a name="1.1.0"></a>
 
@@ -30,13 +27,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   add debug info for travis ([6d51392](https://github.com/Symbitic/markbook/commit/6d51392))
--   disable build.spec.js for now ([4744195](https://github.com/Symbitic/markbook/commit/4744195))
--   fix mkdir -p in Node 8 ([b7b8859](https://github.com/Symbitic/markbook/commit/b7b8859))
+* add debug info for travis ([6d51392](https://github.com/Symbitic/markbook/commit/6d51392))
+* disable build.spec.js for now ([4744195](https://github.com/Symbitic/markbook/commit/4744195))
+* fix mkdir -p in Node 8 ([b7b8859](https://github.com/Symbitic/markbook/commit/b7b8859))
 
 ### Features
 
--   support 'open' flag ([ef9d940](https://github.com/Symbitic/markbook/commit/ef9d940))
+* support 'open' flag ([ef9d940](https://github.com/Symbitic/markbook/commit/ef9d940))
 
 <a name="1.0.0"></a>
 
@@ -44,11 +41,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Chores
 
--   make prettier and eslint happy ([0fb2a47](https://github.com/Symbitic/markbook/commit/0fb2a47))
+* make prettier and eslint happy ([0fb2a47](https://github.com/Symbitic/markbook/commit/0fb2a47))
 
 ### BREAKING CHANGES
 
--   finally ready for v1.0
+* finally ready for v1.0
 
 <a name="0.2.0"></a>
 
@@ -56,8 +53,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   first public release ([cf81009](https://github.com/Symbitic/markbook/commit/cf81009))
--   first working version ([2d22205](https://github.com/Symbitic/markbook/commit/2d22205))
+* first public release ([cf81009](https://github.com/Symbitic/markbook/commit/cf81009))
+* first working version ([2d22205](https://github.com/Symbitic/markbook/commit/2d22205))
 
 <a name="0.1.0"></a>
 
@@ -65,7 +62,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   ready for first actual release ([14d2c21](https://github.com/Symbitic/markbook/commit/14d2c21))
+* ready for first actual release ([14d2c21](https://github.com/Symbitic/markbook/commit/14d2c21))
 
 <a name="0.0.0"></a>
 
@@ -73,8 +70,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   **project:** add more linting and git checks ([1113862](https://github.com/Symbitic/markbook/commit/1113862))
+* **project:** add more linting and git checks ([1113862](https://github.com/Symbitic/markbook/commit/1113862))
 
 ### Features
 
--   **project:** initial commit ([e6207ca](https://github.com/Symbitic/markbook/commit/e6207ca))
+* **project:** initial commit ([e6207ca](https://github.com/Symbitic/markbook/commit/e6207ca))
