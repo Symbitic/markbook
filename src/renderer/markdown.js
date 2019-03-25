@@ -4,7 +4,6 @@ import include from 'remark-include'
 import katex from 'rehype-katex'
 import math from 'remark-math'
 import markdown from 'remark-parse'
-import plantuml from 'remark-plantuml'
 import remark2rehype from 'remark-rehype'
 import unified from 'unified'
 import yamlConfig from 'remark-yaml-config'
@@ -19,7 +18,6 @@ const createProcessor = () =>
     .use(yamlConfig)
     .use(include)
     .use(math)
-    .use(plantuml)
     .use(deflist)
     .use(meta)
     .use(rename)

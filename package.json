@@ -99,7 +99,6 @@
     "remark-include": "^2.0.0",
     "remark-math": "^1.0.6",
     "remark-parse": "^6.0.3",
-    "remark-plantuml": "0.1.0-0",
     "remark-rehype": "^4.0.0",
     "remark-retext": "^3.1.2",
     "remark-yaml-config": "^4.0.3",
