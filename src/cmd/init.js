@@ -1,14 +1,17 @@
+import init from '../book/init'
+import path from 'path'
 import { status } from '../common/log'
 
 /**
  * Create a new markbook.
  */
-export default function (name, options = {}) {
-  options.theme = options.theme || 'default'
-  if (name) {
-    status(`Init in ${name}`)
+export default function (dir, options = {}) {
+  const fulldir = path.resolve(dir || '.')
+  if (dir) {
+    status(`Creating new book in ${dir}`)
   } else {
-    status('Init in current directory')
+    status('Creating new book in current dir')
   }
-  status(`Theme: ${options.theme}`)
+
+  return init(fulldir, options)
 }

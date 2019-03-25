@@ -83,6 +83,7 @@
     "commander": "^2.19.0",
     "cosmiconfig": "^5.1.0",
     "handlebars": "^4.1.1",
+    "inquirer": "^6.2.2",
     "is-wsl": "^1.1.0",
     "joi": "^14.3.0",
     "js-yaml": "^3.13.0",
