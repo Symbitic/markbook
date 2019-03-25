@@ -7,7 +7,7 @@ import { select } from 'unist-util-select'
 import { parse as toml } from 'toml'
 import { safeLoad as yaml } from 'js-yaml'
 
-export default function metadata(options = {}) {
+export default function metadata (options = {}) {
   return (tree, file) => {
     const heading = select('heading', tree)
     file.data.title = heading ? toString(heading) : ''

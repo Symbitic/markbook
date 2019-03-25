@@ -34,7 +34,7 @@ const getCommand = uri => {
   }
 }
 
-export default function open(uri) {
+export default function open (uri) {
   console.log(isWsl)
   const [cmd, ...args] = getCommand(uri)
   return spawn(cmd, args)

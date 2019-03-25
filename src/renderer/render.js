@@ -13,7 +13,7 @@ import search from './search'
 
 const renderFile = (file, processor) => readVFile(file).then(processor.process)
 
-function write(file, config, template, vfile) {
+function write (file, config, template, vfile) {
   const content = vfile.contents.toString().replace(/\n/g, '\n            ')
 
   // Make sure we don't end up with a title like "Markbook - Markbook"
@@ -59,7 +59,7 @@ const renderFiles = (config, processor, theme, files) => {
   return Promise.all(files.map(cb)).then(theme.copy)
 }
 
-export default async function render(config) {
+export default async function render (config) {
   const files = [
     ...config.summary.prefix,
     ...config.summary.chapters,

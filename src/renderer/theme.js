@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars'
 import { copyDir, createPath, readFile } from '../common/files'
 
-export default function createTheme(config) {
+export default function createTheme (config) {
   const index = createPath('theme/index.hbs')
   const themeDir = createPath('theme')
 

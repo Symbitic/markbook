@@ -1,4 +1,4 @@
-export default function createToc(config) {
+export default function createToc (config) {
   const geturl = filename =>
     filename
       .replace(/README\.md$/, 'index.md')

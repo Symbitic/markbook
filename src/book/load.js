@@ -19,7 +19,7 @@ const check = dir =>
  * @param {!string} dir Full path to book directory.
  * @return {BookConfig} Config object.
  */
-export default function load(dir) {
+export default function load (dir) {
   const explorer = cosmiconfig('markbook', {
     searchPlaces: ['markbook.yml', 'markbook.yaml', 'markbook.json']
   })

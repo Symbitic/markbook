@@ -5,7 +5,7 @@
 import map from 'unist-util-map'
 import visit from 'unist-util-visit'
 
-export default function deflist(options = {}) {
+export default function deflist (options = {}) {
   return (tree, file) => {
     map(tree, node => {
       if (node.type !== 'paragraph') {

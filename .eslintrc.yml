@@ -16,8 +16,6 @@ extends:
 plugins:
   - import
   - jest
-  - prettier
-  - standard
 
 rules:
   no-console: off
@@ -25,5 +23,3 @@ rules:
     - error
     - unix
   prefer-const: error
-  space-before-function-paren: off
-  prettier/prettier: error

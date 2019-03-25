@@ -30,7 +30,7 @@ const schema = Joi.object({
  * @param {Object} result - Result from cosmiconfig.
  * @return {Promise<BookConfig>} Markbook configuration.
  */
-export default function(result) {
+export default function (result) {
   if (!result || result.isEmpty) {
     return reject('Config file not found or empty')
   }

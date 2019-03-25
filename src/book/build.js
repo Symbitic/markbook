@@ -6,6 +6,6 @@ import load from './load'
  * @param {!string} dir Full path to book directory.
  * @return {BookConfig} Config object.
  */
-export default function build(dir) {
+export default function build (dir) {
   return load(dir).then(render)
 }

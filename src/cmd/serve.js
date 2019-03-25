@@ -7,7 +7,7 @@ import { status } from '../common/log'
 /**
  * Run a web server for previewing a book.
  */
-export default function(dir, options) {
+export default function (dir, options) {
   const fulldir = path.resolve(dir || '.')
   if (dir) {
     status(`Serving ${dir}`)

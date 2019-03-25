@@ -8,7 +8,7 @@ import { handleErrors } from '../common/errors'
 import { status } from '../common/log'
 import open from '../common/open'
 
-export default function(dir, options = {}) {
+export default function (dir, options = {}) {
   options.open = options.open || false
   const fulldir = path.resolve(dir || '.')
   if (dir) {

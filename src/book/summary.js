@@ -259,7 +259,7 @@ const parse = file =>
  * @param {!string} filename - Path to `SUMMARY.md`.
  * @returns {Summary} An object representing the books contents.
  */
-export default function(config) {
+export default function (config) {
   const summary = path.join(config.source, 'SUMMARY.md')
 
   return readFile(summary)

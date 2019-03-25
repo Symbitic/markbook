@@ -11,7 +11,7 @@ const rm = promisify(rimraf)
 /**
  * Remove the destination directory.
  */
-export default function(dir) {
+export default function (dir) {
   const fulldir = path.resolve(dir || '.')
   if (dir) {
     status('Cleaning %s', dir)

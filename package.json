@@ -26,7 +26,7 @@
     "lint:fix": "eslint --fix \"src/**/*.js\"",
     "prebundle": "npm run build",
     "predoc": "npm run build",
-    "pretty": "prettier --write \"src/**/*.js\"",
+    "pretty": "prettier-standard \"src/**/*.js\"",
     "release": "standard-version",
     "test": "jest",
     "watch": "rollup -c -w"
@@ -60,7 +60,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
+      "prettier-standard",
       "eslint --fix",
       "git add"
     ],
@@ -134,6 +134,7 @@
     "lint-staged": "^8.1.5",
     "pkg": "^4.3.5",
     "prettier": "^1.15.2",
+    "prettier-standard": "^9.1.1",
     "rollup": "^1.7.0",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",

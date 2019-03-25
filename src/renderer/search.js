@@ -19,7 +19,7 @@ var fuse = new Fuse(data, {
 });
 `
 
-export default function search(config) {
+export default function search (config) {
   const files = [
     ...config.summary.prefix,
     ...config.summary.chapters,
