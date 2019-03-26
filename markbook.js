@@ -1,5 +1,5 @@
 /* global fuse, EventSource */
-function togglesearch() {
+function togglesearch () {
   var searchbar = document.getElementById('searchbar')
   var button = document.querySelector('span[aria-controls="searchbar"]')
   var enabled = button.getAttribute('aria-expanded') === 'true'
@@ -13,7 +13,7 @@ function togglesearch() {
   }
 }
 
-function togglesidebar() {
+function togglesidebar () {
   var sidebar = document.getElementById('sidebar')
   var content = document.getElementById('content')
   var button = document.querySelector('span[aria-controls="sidebar"]')
@@ -31,7 +31,7 @@ function togglesidebar() {
   }
 }
 
-function oninput(evt) {
+function oninput (evt) {
   const results = fuse
     .search(evt.target.value)
     .filter(({ matches }) => matches && matches.length)
@@ -82,7 +82,7 @@ function oninput(evt) {
   }
 }
 
-function onload() {
+function onload () {
   var searchbar = document.querySelector('span[aria-controls="searchbar"]')
   var sidebar = document.querySelector('span[aria-controls="sidebar"]')
   var search = document.getElementById('searchbar')
@@ -104,10 +104,15 @@ function onload() {
 
   const sse = new EventSource('/sse')
   sse.addEventListener('reload', e => {
-    console.log('Received')
-    console.log(e.data)
-    // window.location.reload(true)
+    console.log('reload')
+    window.location.reload(true)
   })
+  /*
+  sse.addEventListener('error', e => {
+    console.log('error')
+    sse.close()
+  })
+  */
 }
 
 window.addEventListener('DOMContentLoaded', onload)

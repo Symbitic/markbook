@@ -3,7 +3,7 @@
   <head>
     <!-- Generated using Markbook -->
     <meta charset="UTF-8">
-    <title>Markbook - The build command</title>
+    <title>Markbook - build</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,6 +53,14 @@
                 <strong aria-hidden="true">1.1</strong>
                 build
               </a></li>
+              <li><a href="cli/init.html">
+                <strong aria-hidden="true">1.2</strong>
+                init
+              </a></li>
+              <li><a href="cli/serve.html">
+                <strong aria-hidden="true">1.3</strong>
+                serve
+              </a></li>
               <li><a href="config/index.html">
                 <strong aria-hidden="true">2.</strong>
                 Configuration
@@ -60,6 +68,10 @@
               <li><a href="config/summary.html">
                 <strong aria-hidden="true">2.1</strong>
                 SUMMARY.md
+              </a></li>
+              <li><a href="config/themes.html">
+                <strong aria-hidden="true">2.2</strong>
+                Themes
               </a></li>
               <li><a href="writing/index.html">
                 <strong aria-hidden="true">3.</strong>
@@ -83,18 +95,32 @@
             <div class="container">
               <input id="searchbar" class="input is-rounded is-small hidden" type="text" placeholder="Search...">
               <div id="search-results"></div>
-              <h1>The build command</h1>
+              <h1><code>build</code></h1>
             <p>The build command is used to render your book:</p>
-            <pre><code class="language-bash">mdbook build .
+            <pre><code>markbook build [dir]
             </code></pre>
-            <p>It will try to parse your <code>SUMMARY.md</code> file to understand the structure of your book and fetch the corresponding files.</p>
+            <p>Markbook begins by parsing <code>SUMMARY.md</code> to understand the book's layout. It then reads and renders any files listed there.</p>
             <p>The rendered output will maintain the same directory structure as the source for convenience. Large books will therefore remain structured when rendered.</p>
-            <h4>Specify a directory</h4>
-            <p>The <code>build</code> command can take a directory as an argument to use as the book's root instead of the current working directory.</p>
-            <pre><code class="language-bash">mdbook build path/to/book
+            <h2>Directory</h2>
+            <p>By default, markbook will use the current directory. To use a different one, simply specify it on the command-line.</p>
+            <pre><code>markbook build path/to/book
             </code></pre>
-            <hr>
             <p><strong>Note:</strong> <em>Make sure to run the build command in the root directory and not in the source directory</em></p>
+            <h2>Options</h2>
+            <table>
+            <thead>
+            <tr>
+            <th>option</th>
+            <th>description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><code>--open</code></td>
+            <td>Open in the default web browser</td>
+            </tr>
+            </tbody>
+            </table>
             </div>
           </div>
         </div>

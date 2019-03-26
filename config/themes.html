@@ -3,12 +3,12 @@
   <head>
     <!-- Generated using Markbook -->
     <meta charset="UTF-8">
-    <title>Markbook - Contributors</title>
+    <title>Markbook Themes</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff" />
-    
+    <base href="..">
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
@@ -95,11 +95,57 @@
             <div class="container">
               <input id="searchbar" class="input is-rounded is-small hidden" type="text" placeholder="Search...">
               <div id="search-results"></div>
-              <h1>Contributors</h1>
-            <ul>
-            <li><a href="https://github.com/Symbitic/">Alex Shaw</a></li>
-            </ul>
-            <p>If you feel you're missing from this list, feel free to add yourself in a PR.</p>
+              <h1>Markbook Themes</h1>
+            <p>Markbook includes support for HTML/JS/CSS themes, using <a href="https://handlebarsjs.com/">Handlebars</a> as a template.</p>
+            <p><em>At this time, Markbook does not support user-chosen themes. We are working on it.</em></p>
+            <h2>Files</h2>
+            <p>Every theme is expected to contain a file named <code>index.hbs</code> in the root directory.</p>
+            <p>Besides that, any assets (CSS, JS, favicons) in the theme directory will be copied to the destination.</p>
+            <h2>Configuration</h2>
+            <p>The following variables are defined for every theme:</p>
+            <table>
+            <thead>
+            <tr>
+            <th></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><code>title</code></td>
+            <td>Title of the book</td>
+            </tr>
+            <tr>
+            <td><code>description</code></td>
+            <td>Book description</td>
+            </tr>
+            <tr>
+            <td><code>root</code></td>
+            <td>Root directory. Used to calculate e.g. the path to <code>/markbook.css</code> if the filename is <code>/cli/init.html</code></td>
+            </tr>
+            <tr>
+            <td><code>book_title</code></td>
+            <td>Chapter title</td>
+            </tr>
+            <tr>
+            <td><code>toc.prefix</code></td>
+            <td>Prefix links (each contains <code>url</code> and <code>title</code>)</td>
+            </tr>
+            <tr>
+            <td><code>toc.chapters</code></td>
+            <td>Chapters (each contains <code>url</code> and <code>title</code>)</td>
+            </tr>
+            <tr>
+            <td><code>toc.suffix</code></td>
+            <td>Suffix links (each contains <code>url</code> and <code>title</code>)</td>
+            </tr>
+            <tr>
+            <td><code>content</code></td>
+            <td>HTML content</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Some names may change before the next release.</p>
             </div>
           </div>
         </div>

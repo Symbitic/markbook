@@ -3,12 +3,12 @@
   <head>
     <!-- Generated using Markbook -->
     <meta charset="UTF-8">
-    <title>Markbook - Contributors</title>
+    <title>Markbook - init</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff" />
-    
+    <base href="..">
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
@@ -95,11 +95,43 @@
             <div class="container">
               <input id="searchbar" class="input is-rounded is-small hidden" type="text" placeholder="Search...">
               <div id="search-results"></div>
-              <h1>Contributors</h1>
-            <ul>
-            <li><a href="https://github.com/Symbitic/">Alex Shaw</a></li>
-            </ul>
-            <p>If you feel you're missing from this list, feel free to add yourself in a PR.</p>
+              <h1><code>init</code></h1>
+            <p>The init command generates a new book:</p>
+            <pre><code>markbook init [dir]
+            </code></pre>
+            <h2>Directory</h2>
+            <p>By default, markbook will use in the current directory. To have markbook use a different directory, simply give it as a commandline argument.</p>
+            <pre><code>markbook build path/to/book
+            </code></pre>
+            <h2>Options</h2>
+            <table>
+            <thead>
+            <tr>
+            <th>option</th>
+            <th>description</th>
+            <th>required?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><code>--author</code></td>
+            <td>Author's name</td>
+            <td>Yes</td>
+            </tr>
+            <tr>
+            <td><code>--description</code></td>
+            <td>Book description</td>
+            <td>No</td>
+            </tr>
+            <tr>
+            <td><code>--title</code></td>
+            <td>Book title</td>
+            <td>Yes</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>If any of these three options are not given on the command-line, Markbook will prompt for them.</p>
+            <p>Non-required options can be empty.</p>
             </div>
           </div>
         </div>
