@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/Symbitic/markbook/compare/v1.3.0...v1.4.0) (2019-03-26)
+
+
+### Features
+
+* add init command ([3ff1a94](https://github.com/Symbitic/markbook/commit/3ff1a94))
+* add reload-on-change to serve ([eda5be9](https://github.com/Symbitic/markbook/commit/eda5be9))
+
+
+### Performance Improvements
+
+* remove remark-plantuml (too large and breaks pkg) ([2beafe8](https://github.com/Symbitic/markbook/commit/2beafe8))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/Symbitic/markbook/compare/v1.2.0...v1.3.0) (2019-03-22)
 
