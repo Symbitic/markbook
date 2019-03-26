@@ -4,14 +4,19 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Travis](https://img.shields.io/travis/Symbitic/markbook.svg?style=flat-square)](https://travis-ci.org/Symbitic/markbook)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![github issues](https://img.shields.io/github/issues/symbitic/markbook.svg?style=flat-square)](https://github.com/Symbitic/markbook/issues)
 [![stars](https://img.shields.io/github/stars/symbitic/markbook.svg?style=flat-square)](https://github.com/Symbitic/markbook)
-[![forks](https://img.shields.io/github/forks/symbitic/markbook.svg?style=flat-square)](https://github.com/Symbitic/markbook)
 > Write books in CommonMark.
 
 Markbook allows full books to be written in CommonMark. Similar in concept to [GitBook][1] or [mdBook][2], it has a vastly different philosophy.
 
 **Markbook is still in it's infancy. Expect major changes.**
+
+If you like this project, please consider doing one of the following:
+* Starring me on GitHub
+* [Contributing](#contributing)
+* [Buying me a soda](https://buymeacoff.ee/qh0rXkiCd) (can't have coffee -- my kidney's would explode)
+
+[![BuyMeACoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoff.ee/qh0rXkiCd)
 
 ## Getting Started
 
