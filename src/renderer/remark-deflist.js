@@ -15,7 +15,6 @@ const isdeflist = (node, i, parent) =>
 
 export default function deflist (options = {}) {
   return (tree, file) => {
-    // console.log(tree)
     visit(tree, ['paragraph'], (node, i, parent) => {
       const isdef = isdeflist(node, i, parent)
       if (!isdef) {

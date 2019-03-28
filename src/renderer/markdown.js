@@ -10,6 +10,7 @@ import yamlConfig from 'remark-yaml-config'
 import rename from './remark-rename'
 import meta from './remark-meta'
 import deflist from './remark-deflist'
+import supersub from './remark-supersub'
 
 const createProcessor = () =>
   unified()
@@ -19,6 +20,7 @@ const createProcessor = () =>
     .use(include)
     .use(math)
     .use(deflist)
+    .use(supersub)
     .use(meta)
     .use(rename)
     .use(remark2rehype)

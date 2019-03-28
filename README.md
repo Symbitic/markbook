@@ -11,8 +11,6 @@ Markbook allows full books to be written in CommonMark. Similar in concept to [G
 
 Read the user guide on <https://symbitic.github.io/markbook/>
 
-**Markbook is still a work-in-progress. Expect major changes.**
-
 If you like this project, please consider doing one of the following:
 * Starring me on GitHub
 * [Contributing](#contributing)
