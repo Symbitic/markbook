@@ -1,7 +1,5 @@
 /**
  * Render Commonmark.
- *
- * @todo Use serial-promise code from home.
  */
 import path from 'path'
 import { status } from '../common/log'

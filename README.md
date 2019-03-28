@@ -89,4 +89,4 @@ Copyright (c) 2018-2019 [Markbook Contributors](https://github.com/Symbitic/mark
 
 [1]: https://www.gitbook.com/
 [2]: https://rust-lang-nursery.github.io/mdBook/
-[3]: https://opensource.org/licenses/MIT
+[3]: https://spdx.org/licenses/MIT

@@ -1,4 +1,4 @@
-# [MIT License](https://spdx.org/licenses/MIT)
+# The MIT License (MIT)
 
 Copyright (c) 2018-2019 [Markbook Contributors](https://github.com/Symbitic/markbook/graphs/contributors)
 
