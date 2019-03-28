@@ -18,7 +18,7 @@ export default function (dir, options) {
   status(`Hostname: ${options.hostname}`)
   status(`Port: ${options.port}`)
 
-  const serve = createServer(options.hostname, options.port)
+  const serve = createServer(fulldir, options.hostname, options.port)
 
   return build(fulldir)
     .then(serve)
