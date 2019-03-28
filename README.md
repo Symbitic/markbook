@@ -85,7 +85,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Licensed under the [MIT][3] license. See [LICENSE.md](LICENSE.md) for more details.
 
-Copyright (c) 2018-2019 [Markbook Contributors](https://github.com/Symbitic/markbook/graphs/contributors)
+Copyright &copy; 2018-2019 [Markbook Contributors](https://github.com/Symbitic/markbook/graphs/contributors)
 
 [1]: https://www.gitbook.com/
 [2]: https://rust-lang-nursery.github.io/mdBook/
