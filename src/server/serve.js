@@ -4,8 +4,9 @@ import EventEmitter from 'events'
 import { handleErrors } from '../common/errors'
 import Koa from 'koa'
 import { PassThrough } from 'stream'
+import path from 'path'
 import send from 'koa-send'
-import { status, error } from '../common/log'
+import { enableLog, disableLog, status, error } from '../common/log'
 
 const createServer = (fulldir, hostname, port) => config => {
   const app = new Koa()
@@ -40,10 +41,16 @@ const createServer = (fulldir, hostname, port) => config => {
   app.use(ctx => (ctx.path === '/sse' ? sse(ctx) : root(ctx)))
 
   // status(`Rendering ${path.relative(config.source, file)}`)
-  const onChange = file =>
-    build(fulldir)
-      .then(() => dispatcher.emit('reload'))
+  const onChange = file => {
+    status(`Rendering ${path.relative(config.source, file)}`)
+    disableLog()
+    return build(fulldir)
+      .then(() => {
+        enableLog()
+        dispatcher.emit('reload')
+      })
       .catch(handleErrors)
+  }
 
   chokidar
     .watch(config.source)
