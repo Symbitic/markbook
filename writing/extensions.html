@@ -96,8 +96,37 @@
               <input id="searchbar" class="input is-rounded is-small hidden" type="text" placeholder="Search...">
               <div id="search-results"></div>
               <h1>Markbook-Specific Extensions</h1>
-            <p>Markbook implements a number of extensions to CommonMark. These are intended
-            to make the process of writing more pleasant for developers.</p>
+            <p>Markbook implements a number of extensions to CommonMark. These are intended to make the writing process more pleasant.</p>
+            <h2>Superscript/Subscript</h2>
+            <p>Markbook supports superscript and subscript syntax.</p>
+            <pre><code class="language-markdown">H~2~O
+            </code></pre>
+            <p>renders as: H<sub>2</sub>O</p>
+            <pre><code class="language-markdown">21^st^ Century
+            </code></pre>
+            <p>renders as: 21<sup>st</sup> Century</p>
+            <h2>Definition Lists</h2>
+            <p>Markbook supports definition lists, similar to the ones used by <a href="https://pandoc.org/MANUAL.html#definition-lists">pandoc</a>.</p>
+            <pre><code class="language-markdown">Term 1
+            
+            : Definition 1
+            </code></pre>
+            <p>renders as:</p>
+            <p><dl><dt>Term 1</dt><dd>Definition 1</dd></dl></p>
+            <h2>Footnotes</h2>
+            <p><a href="https://pandoc.org/MANUAL.html#footnotes">Footnotes</a> are another feature whose syntax is borrowed from pandoc.</p>
+            <pre><code class="language-markdown">Here is a footnote reference.[^1]
+            
+            [^1]: Here is the footnote.
+            </code></pre>
+            <p>renders as:</p>
+            <p>Here is a footnote reference.<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup></p>
+            <div class="footnotes">
+            <hr>
+            <ol>
+            <li id="fn-1">Here is the footnote.<a href="#fnref-1" class="footnote-backref">↩</a></li>
+            </ol>
+            </div>
             </div>
           </div>
         </div>
