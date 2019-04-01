@@ -5,6 +5,8 @@ import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import unified from 'unified'
 
+const strip = ([str]) => str.replace(/\n +/g, '\n')
+
 const parse = str =>
   unified()
     .use(markdown)
@@ -14,18 +16,27 @@ const parse = str =>
     .process(str)
     .then(data => data.toString())
 
-const basic = `
-Term 1
+const tests = [
+  [
+    'basic definition list',
+    strip`
+      Term 1
+      
+      : Definition 1
+    `
+  ],
+  [
+    'basic definition list + bold',
+    strip`
+      Term 1
 
-: Definition 1
-`
+      : Definition **1**
+    `
+  ]
+]
 
-const basicOutput = '<p><dl><dt>Term 1</dt><dd>Definition 1</dd></dl></p>'
-
-const tests = [['basic definition list', basic, basicOutput]]
-
-describe.each(tests)('remark-deflist', (name, source, expected) => {
+describe.each(tests)('remark-deflist', (name, source) => {
   it(`should parse a ${name}`, () => {
-    expect(parse(source)).resolves.toBe(expected)
+    expect(parse(source)).resolves.toMatchSnapshot()
   })
 })

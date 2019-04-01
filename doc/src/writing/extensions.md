@@ -1,6 +1,6 @@
 # Markbook-Specific Extensions
 
-Markbook implements a number of extensions to CommonMark. These are intended to make the process of writing more pleasant for developers.
+Markbook implements a number of extensions to CommonMark. These are intended to make the writing process more pleasant.
 
 ## Superscript/Subscript
 
@@ -33,3 +33,19 @@ renders as:
 Term 1
 
 : Definition 1
+
+## Footnotes
+
+[Footnotes](https://pandoc.org/MANUAL.html#footnotes) are another feature whose syntax is borrowed from pandoc.
+
+```markdown
+Here is a footnote reference.[^1]
+
+[^1]: Here is the footnote.
+```
+
+renders as:
+
+Here is a footnote reference.[^1]
+
+[^1]: Here is the footnote.

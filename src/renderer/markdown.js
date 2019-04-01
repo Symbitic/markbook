@@ -14,7 +14,9 @@ import supersub from './remark-supersub'
 
 const createProcessor = () =>
   unified()
-    .use(markdown)
+    .use(markdown, {
+      footnotes: true
+    })
     .use(frontmatter)
     .use(yamlConfig)
     .use(include)

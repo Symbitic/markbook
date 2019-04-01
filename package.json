@@ -29,6 +29,7 @@
     "pretty": "prettier-standard \"src/**/*.js\"",
     "release": "standard-version",
     "test": "jest",
+    "test:update": "jest --updateSnapshot",
     "watch": "rollup -c -w"
   },
   "pkg": {
@@ -70,7 +71,6 @@
     ]
   },
   "jest": {
-    "globalTeardown": "<rootDir>/tests/cleanup.js",
     "setupFilesAfterEnv": [
       "<rootDir>/tests/setup.js"
     ]

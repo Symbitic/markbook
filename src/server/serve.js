@@ -40,7 +40,6 @@ const createServer = (fulldir, hostname, port) => config => {
 
   app.use(ctx => (ctx.path === '/sse' ? sse(ctx) : root(ctx)))
 
-  // status(`Rendering ${path.relative(config.source, file)}`)
   const onChange = file => {
     status(`Rendering ${path.relative(config.source, file)}`)
     disableLog()
