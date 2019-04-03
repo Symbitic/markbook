@@ -1,4 +1,5 @@
-import build from '../book/build'
+import render from '../renderer/render'
+import load from '../book/load'
 import chokidar from 'chokidar'
 import EventEmitter from 'events'
 import { handleErrors } from '../common/errors'
@@ -43,7 +44,8 @@ const createServer = (fulldir, hostname, port) => config => {
   const onChange = file => {
     status(`Rendering ${path.relative(config.source, file)}`)
     disableLog()
-    return build(fulldir)
+    return load(fulldir)
+      .then(render)
       .then(() => {
         enableLog()
         dispatcher.emit('reload')

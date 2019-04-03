@@ -3,7 +3,8 @@
  */
 
 import path from 'path'
-import build from '../book/build'
+import render from '../renderer/render'
+import load from '../book/load'
 import { handleErrors } from '../common/errors'
 import { status } from '../common/log'
 import open from '../common/open'
@@ -20,7 +21,8 @@ export default function (dir, options = {}) {
     status('Opening in web browser')
   }
 
-  return build(fulldir)
+  return load(fulldir)
+    .then(render)
     .then(
       config =>
         options.open &&

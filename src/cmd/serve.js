@@ -1,5 +1,6 @@
 import path from 'path'
-import build from '../book/build'
+import render from '../renderer/render'
+import load from '../book/load'
 import createServer from '../server/serve'
 import { handleErrors } from '../common/errors'
 import { status } from '../common/log'
@@ -20,7 +21,8 @@ export default function (dir, options) {
 
   const serve = createServer(fulldir, options.hostname, options.port)
 
-  return build(fulldir)
+  return load(fulldir)
+    .then(render)
     .then(serve)
     .catch(handleErrors)
 }
