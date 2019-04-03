@@ -40,16 +40,9 @@ function chicago (item, i) {
     type: 'listItem',
     spread: false,
     data: {
-      hProperties: { id: `ref-${id}`, className: 'ref-item' }
+      hProperties: { id: `ref-${id}`, className: 'reference' }
     },
-    children: [
-      ...book(authors, year, title, publisher),
-      {
-        type: 'link',
-        url: `#cite-${id}`,
-        children: [{ type: 'text', value: '↩' }]
-      }
-    ]
+    children: book(authors, year, title, publisher)
   }
   return {
     id,
@@ -111,8 +104,7 @@ function citations (tree, items) {
           url: `#ref-${item.id}`,
           data: {
             hProperties: {
-              id: `cite-${item.id}`,
-              className: 'ref-link'
+              className: 'citation'
             }
           },
           children: [{ type: 'text', value: item.citation }]

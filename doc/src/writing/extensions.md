@@ -4,7 +4,7 @@ bibliography: bibliography.json
 
 # Markbook-Specific Extensions
 
-Markbook implements a number of extensions to CommonMark. These are intended to make the writing process more pleasant.
+Markbook implements a number of extensions to CommonMark, in order to make writing easier and to add support for extra features.
 
 ## YAML/TOML
 
