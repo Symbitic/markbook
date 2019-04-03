@@ -1,0 +1,62 @@
+{
+  "gregory2014": {
+    "title": "Game Engine Architecture, Second Edition.",
+    "author": [
+      {
+        "name": "Jason Gregory"
+      }
+    ],
+    "type": "book",
+    "year": "2014",
+    "publisher": "CRC Press",
+    "link": [
+      {
+        "url": "http://www.gameenginebook.com/"
+      }
+    ],
+    "identifier": [
+      {
+        "type": "doi",
+        "id": "10.1186/1758-2946-3-47"
+      }
+    ]
+  },
+  "singh2016": {
+    "title": "Vulkan Essentials",
+    "author": [
+      {
+        "name": "Parminder Singh"
+      }
+    ],
+    "type": "book",
+    "year": "2016",
+    "publisher": "Packt Publishing",
+    "link": [
+      {
+        "url": "https://www.packtpub.com/application-development/vulkan-essentials"
+      }
+    ]
+  },
+  "moller2008": {
+    "title": "Real Time Rendering, Third Edition",
+    "author": [
+      {
+        "name": "Akenine-Moller, Thomas"
+      },
+      {
+        "name": "Haines, Eric"
+      },
+      {
+        "name": "Hoffman, Naty"
+      }
+    ],
+    "type": "book",
+    "year": "2008",
+    "publisher": "CRC Press",
+    "link": [
+      {
+        "url": "http://www.realtimerendering.com/"
+      }
+    ]
+  }
+}

@@ -11,6 +11,7 @@ import rename from './remark-rename'
 import meta from './remark-meta'
 import deflist from './remark-deflist'
 import supersub from './remark-supersub'
+import bibliography from './remark-bibliography'
 
 const createProcessor = () =>
   unified()
@@ -24,6 +25,7 @@ const createProcessor = () =>
     .use(deflist)
     .use(supersub)
     .use(meta)
+    .use(bibliography)
     .use(rename)
     .use(remark2rehype)
     .use(katex)
