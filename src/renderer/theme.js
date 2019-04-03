@@ -1,16 +1,13 @@
 import Handlebars from 'handlebars'
-import { copyDir, createPath, readFile } from '../common/files'
+import { copyDir, readFile } from '../common/files'
+import path from 'path'
 
 export default function createTheme (config) {
-  const index = createPath('theme/index.hbs')
-  const themeDir = createPath('theme')
+  const index = path.join(config.theme, 'index.hbs')
 
-  const copy = () =>
-    copyDir(
-      themeDir,
-      config.destination,
-      name => !/index\.(hbs|pug)/.test(name)
-    )
+  const exclude = name => !/index\.(hbs|pug)/.test(name)
+
+  const copy = () => copyDir(config.theme, config.destination, exclude)
 
   return readFile(index)
     .then(data => Handlebars.compile(data.toString()))

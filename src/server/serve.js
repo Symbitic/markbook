@@ -52,7 +52,7 @@ const createServer = (fulldir, hostname, port) => config => {
   }
 
   chokidar
-    .watch(config.source)
+    .watch([config.source, config.theme])
     .on('change', onChange)
     .on('error', err => {
       error(`Chokidar Error: ${err}`)
