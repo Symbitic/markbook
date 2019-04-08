@@ -1,99 +1,105 @@
-/* global fuse, EventSource */
+/* global EventSource, index */
+
+// Store elements for faster ops.
+var searchHeader = document.getElementById('search-header')
+var searchResults = document.getElementById('search-results')
+var searchbar = document.getElementById('searchbar')
+var searchbarToggle = document.getElementById('searchbar-toggle')
+var search = document.getElementById('search')
+var sidebar = document.getElementById('sidebar')
+var sidebarToggle = document.getElementById('sidebar-toggle')
+var content = document.getElementById('content')
+
 function togglesearch () {
-  var searchbar = document.getElementById('searchbar')
-  var button = document.querySelector('span[aria-controls="searchbar"]')
-  var enabled = button.getAttribute('aria-expanded') === 'true'
+  var enabled = searchbarToggle.getAttribute('aria-expanded') === 'true'
 
   if (enabled) {
-    button.setAttribute('aria-expanded', 'false')
-    searchbar.classList.add('hidden')
+    searchbarToggle.setAttribute('aria-expanded', 'false')
+    searchbar.value = ''
+    search.classList.add('hidden')
   } else {
-    button.setAttribute('aria-expanded', 'true')
-    searchbar.classList.remove('hidden')
+    searchbarToggle.setAttribute('aria-expanded', 'true')
+    search.classList.remove('hidden')
+    searchbar.focus()
   }
 }
 
 function togglesidebar () {
-  var sidebar = document.getElementById('sidebar')
-  var content = document.getElementById('content')
-  var button = document.querySelector('span[aria-controls="sidebar"]')
-  var enabled = button.getAttribute('aria-expanded') === 'true'
+  var enabled = sidebarToggle.getAttribute('aria-expanded') === 'true'
 
   // Ordering is important
   if (enabled) {
-    button.setAttribute('aria-expanded', 'false')
+    sidebarToggle.setAttribute('aria-expanded', 'false')
     sidebar.classList.add('hidden')
     content.classList.replace('is-10', 'is-12')
   } else {
-    button.setAttribute('aria-expanded', 'true')
+    sidebarToggle.setAttribute('aria-expanded', 'true')
     content.classList.replace('is-12', 'is-10')
     sidebar.classList.remove('hidden')
   }
 }
 
 function oninput (evt) {
-  const results = fuse
-    .search(evt.target.value)
-    .filter(({ matches }) => matches && matches.length)
-    .map(({ item, matches }) =>
-      matches.map(match => {
-        var text = item[match.key]
-        var result = []
-        var matches = [].concat(match.indices)
-        var pair = matches.shift()
+  if (evt.target.value.length < 3) {
+    searchHeader.innerHTML = ''
+    searchResults.innerHTML = ''
+    return
+  }
+  var results = index.search(evt.target.value, 15).map(result => {
+    var contents = result.contents.split(/\s/).filter(str => str.length)
+    var idx = contents.indexOf(evt.target.value)
+    var start = Math.max(idx - 10, 0)
+    var end = Math.min(idx + 15, contents.length - 1)
+    var regex = new RegExp(evt.target.value, 'gi')
+    var str = contents
+      .slice(start, end)
+      .join(' ')
+      .replace(regex, '<strong>$&</strong>')
+    var file =
+      result.file.length > 0 && result.title.length > 0
+        ? '<a href="' + result.file + '">' + result.title + '</a>'
+        : ''
+    var teaser =
+      str.length > 0 && str.indexOf(evt.target.value) !== -1
+        ? '<span class="teaser">' + str + '</span>'
+        : ''
+    return '<li>'
+      .concat(file)
+      .concat(teaser)
+      .concat('</li>')
+      .replace('<li></li>', '')
+  })
+  searchHeader.innerHTML =
+    String(results.length) + ' results for "' + evt.target.value + '"'
+  searchResults.innerHTML = results.join('')
+}
 
-        for (var i = 0; i < text.length; i++) {
-          var char = text.charAt(i)
-          if (pair && i === pair[0]) {
-            result.push('<b>')
-          }
-          result.push(char)
-          if (pair && i === pair[1]) {
-            result.push('</b>')
-            pair = matches.shift()
-          }
-        }
-
-        return {
-          result: result.join(''),
-          file: item.file
-        }
-      })
-    )
-  if (results && results.length) {
-    document.getElementById('search-results').innerHTML = `
-      <p class="is-size-5">${results.length} results for '${
-      evt.target.value
-    }'</p>
-      <ul>
-        ${results
-          .map(
-            item => `
-          <li>
-            <a class="is-size-6"><strong>${item.file}</strong></a>
-          </li>
-        `
-          )
-          .join('')}
-      </ul>
-    `
-  } else {
-    document.getElementById('search-results').innerHTML = ''
+function clear (evt) {
+  var enabled = searchbarToggle.getAttribute('aria-expanded') === 'true'
+  if (enabled) {
+    if (evt.key === 'Escape') {
+      searchHeader.innerHTML = ''
+      searchResults.innerHTML = ''
+      searchbar.value = ''
+      document.activeElement.blur()
+    }
   }
 }
 
+function reload () {
+  // window.location.reload(true);
+}
+
 function onload () {
-  var searchbar = document.querySelector('span[aria-controls="searchbar"]')
-  var sidebar = document.querySelector('span[aria-controls="sidebar"]')
-  var search = document.getElementById('searchbar')
+  if (searchbarToggle) {
+    searchbarToggle.addEventListener('click', togglesearch)
+  }
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', togglesidebar)
+  }
   if (searchbar) {
-    searchbar.addEventListener('click', togglesearch)
-  }
-  if (sidebar) {
-    sidebar.addEventListener('click', togglesidebar)
-  }
-  if (search) {
-    search.addEventListener('input', oninput)
+    searchbar.addEventListener('input', oninput)
+    searchbar.addEventListener('keyup', clear)
   }
 
   // We can't make this mobile-first because then this can't be rendered
@@ -102,17 +108,8 @@ function onload () {
     togglesidebar()
   }
 
-  const sse = new EventSource('/sse')
-  sse.addEventListener('reload', e => {
-    console.log('reload')
-    window.location.reload(true)
-  })
-  /*
-  sse.addEventListener('error', e => {
-    console.log('error')
-    sse.close()
-  })
-  */
+  var sse = new EventSource('/sse')
+  sse.addEventListener('reload', reload)
 }
 
 window.addEventListener('DOMContentLoaded', onload)

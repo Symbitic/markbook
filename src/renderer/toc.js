@@ -25,7 +25,8 @@ export default function createToc (config) {
   const chapters = config.summary.chapters.map((item, i, items) => ({
     title: item.title,
     url: geturl(item.url),
-    ch: `${chapter(items, i)}.${subchapter(items, i)}`.replace(/\.0$/, '.')
+    ch: `${chapter(items, i)}.${subchapter(items, i)}`.replace(/\.0$/, '.'),
+    level: item.level
   }))
 
   const suffix = config.summary.suffix.map(item => ({
