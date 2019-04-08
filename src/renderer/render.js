@@ -12,7 +12,7 @@ import search from './search'
 const renderFile = (file, processor) => readVFile(file).then(processor.process)
 
 function write (file, config, template, vfile) {
-  const content = vfile.contents.toString().replace(/\n/g, '\n            ')
+  const content = vfile.contents.toString()
 
   // Make sure we don't end up with a title like "Markbook - Markbook"
   const title = vfile.data.title
