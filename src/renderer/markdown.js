@@ -7,11 +7,11 @@ import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import unified from 'unified'
 import yamlConfig from 'remark-yaml-config'
-import rename from './remark-rename'
-import meta from './remark-meta'
-import deflist from './remark-deflist'
-import supersub from './remark-supersub'
-import bibliography from './remark-bibliography'
+import redirect from 'remark-redirect'
+import meta from 'remark-meta'
+import deflist from 'remark-deflist'
+import supersub from 'remark-supersub'
+import bibliography from 'remark-bibliography'
 
 const createProcessor = () =>
   unified()
@@ -26,7 +26,7 @@ const createProcessor = () =>
     .use(supersub)
     .use(meta)
     .use(bibliography)
-    .use(rename)
+    .use(redirect)
     .use(remark2rehype)
     .use(katex)
     .use(html)
