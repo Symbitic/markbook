@@ -18,26 +18,31 @@ Object {
   "chapters": Array [
     Object {
       "ch": "1.",
+      "level": 1,
       "title": "Chapter 1",
       "url": "chapter-1.html",
     },
     Object {
       "ch": "2.",
+      "level": 1,
       "title": "Chapter 2",
       "url": "chapter-2.html",
     },
     Object {
       "ch": "2.1",
+      "level": 2,
       "title": "Chapter 2.1",
       "url": "chapter-2-1.html",
     },
     Object {
       "ch": "2.2",
+      "level": 2,
       "title": "Chapter 2.2",
       "url": "chapter-2-1.html",
     },
     Object {
       "ch": "3.",
+      "level": 1,
       "title": "Chapter 3",
       "url": "chapter-3.html",
     },
