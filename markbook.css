@@ -1,8 +1,7 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text|Roboto');
 
 html {
-  font-family: 'Open Sans', sans-serif;
   color: #333333;
   background-color: #ffffff;
   text-size-adjust: none;
@@ -10,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Open Sans', 'Crimson Text', 'Roboto', sans-serif;
   font-size: 1rem;
   overflow-x: hidden;
 }
@@ -48,7 +48,11 @@ a:hover {
 .menu-list a,
 .menu-list a:visited,
 .menu-list a:hover {
-  color: blue;
+  color: black;
+  font-size: 0.8em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 0px;
 }
 
 .hidden {
@@ -74,5 +78,33 @@ a:hover {
 #search-results ul {
   list-style: none;
   margin-left: 0px;
+  margin-top: 0px;
+}
+
+.level-2 {
+  margin-left: 0.75em;
+}
+
+#search-header {
+  font-weight: bold;
+  font-size: 1em;
+  padding: 18px 0 0 5px;
+  color: #666;
+}
+
+#search-results {
+  list-style: none;
+  /* padding-left: 20px;*/
+  /*padding-left: 0.75em;*/
+}
+
+.teaser {
+  display: block;
+  clear: both;
+  margin: 5px 0 0 25px;
+  font-size: 0.8em;
+}
+
+.content h1:not(:first-child) {
   margin-top: 0px;
 }
