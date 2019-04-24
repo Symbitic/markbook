@@ -127,6 +127,10 @@ title: Book
 <td><code>bibliography</code></td>
 <td>Bibliography (see <a href="#bibliography">below</a>)</td>
 </tr>
+<tr>
+<td><code>style</code></td>
+<td>Citation style for <a href="#bibliography">bibliographies</a></td>
+</tr>
 </tbody>
 </table>
 <h2>Superscript/Subscript</h2>
@@ -181,21 +185,31 @@ bibliography: bibliography.json
 }
 </code></pre>
 <p>Then <code>Vulkan has better performance than OpenGL (@singh2016).</code> will be rendered as:</p>
-<p>Vulkan has better performance than OpenGL (<a href="#ref-singh2016" class="citation">Singh 2016</a>).</p>
+<p>Vulkan has better performance than OpenGL <a href="#ref-singh2016" class="citation">(Singh 2016)</a>.</p>
 <p>An entry for "Vulkan Essentials" will then be included in the "References" section at the end.</p>
+<p>Besides <code>bibliography</code>, two other fields are supported: <code>style</code> and <code>locale</code>.</p>
+<p><code>style</code> can be set to any of the following:</p>
+<ul>
+<li><code>apa</code> - APA citations.</li>
+<li><code>chicago</code> - Chicago author-date citations.</li>
+<li><code>mla</code> - MLA citations.</li>
+<li><code>vancouver</code> - Vancouver citations.</li>
+</ul>
+<p>Currently, <code>en-us</code> is the only supported locale.</p>
+<p>By default, if <code>style</code> and <code>locale</code> are not given, <code>chicago</code> and <code>en-us</code> will be used.</p>
 <h3>Formats</h3>
 <p>Currently the following bibliographic formats are supported:</p>
 <ul>
 <li><a href="http://okfnlabs.org/bibjson/">BibJSON</a></li>
 </ul>
-<p>BibTex support is planned next.</p>
-<h3>Styles</h3>
-<p>Currently only Chicago-style citations are supported (and only books at that).</p>
-<p>Support for more citation styles will be added later.</p>
+<p>BibTeX support is planned next.</p>
+<h2>External Files</h2>
+<p>You can include other files by using <code>@include filename.md</code>. Once loaded, they are parsed with Remark.</p>
+<p>Recursive includes will result in an error, but one external file can include another one. That is, if <code>1.md</code> includes <code>2.md</code>, then <code>2.md</code> can still include <code>3.md</code>.</p>
 <div class="references"><h2>References</h2><ol class="ref-list">
-<li id="ref-gregory2014" class="reference">Gregory. 2014. <em>Game Engine Architecture, Second Edition.</em>. CRC Press. </li>
-<li id="ref-singh2016" class="reference">Singh. 2016. <em>Vulkan Essentials</em>. Packt Publishing. </li>
-<li id="ref-moller2008" class="reference">Akenine-Moller, Haines, and Hoffman. 2008. <em>Real Time Rendering, Third Edition</em>. CRC Press. </li>
+<li id="ref-moller2008" class="reference">Akenine-Moller, Thomas, Eric Haines, and Naty Hoffman. 2008. <em>Real Time Rendering, Third Edition</em>. CRC Press. http://www.realtimerendering.com/.</li>
+<li id="ref-gregory2014" class="reference">Gregory, Jason. 2014. <em>Game Engine Architecture, Second Edition.</em> CRC Press. https://doi.org/10.1186/1758-2946-3-47.</li>
+<li id="ref-singh2016" class="reference">Singh, Parminder. 2016. <em>Vulkan Essentials</em>. Packt Publishing. https://www.packtpub.com/application-development/vulkan-essentials.</li>
 </ol></div>
 <div class="footnotes">
 <hr>
