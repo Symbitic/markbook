@@ -27,6 +27,7 @@ Supported metadata fields include:
 | ----- | ----------- |
 | `title` | Chapter title |
 | `bibliography` | Bibliography (see [below](#bibliography)) |
+| `style` | Citation style for [bibliographies](#bibliography) |
 
 ## Superscript/Subscript
 
@@ -116,15 +117,28 @@ Vulkan has better performance than OpenGL (@singh2016).
 
 An entry for "Vulkan Essentials" will then be included in the "References" section at the end.
 
+Besides `bibliography`, two other fields are supported: `style` and `locale`.
+
+`style` can be set to any of the following:
+* `apa` - APA citations.
+* `chicago` - Chicago author-date citations.
+* `mla` - MLA citations.
+* `vancouver` - Vancouver citations.
+
+Currently, `en-us` is the only supported locale.
+
+By default, if `style` and `locale` are not given, `chicago` and `en-us` will be used.
+
 ### Formats
 
 Currently the following bibliographic formats are supported:
 * [BibJSON](http://okfnlabs.org/bibjson/)
 
-BibTex support is planned next.
+BibTeX support is planned next.
 
-### Styles
+## External Files
 
-Currently only Chicago-style citations are supported (and only books at that).
+You can include other files by using `@include filename.md`. Once loaded, they are parsed with Remark.
 
-Support for more citation styles will be added later.
+Recursive includes will result in an error, but one external file can include another one. That is, if `1.md` includes `2.md`, then `2.md` can still include `3.md`.
+

@@ -8,5 +8,5 @@ This very guide is written in CommonMark, to serve as an example of how to use m
 
 Markbook is free and open source under the MIT license. The source code is available on GitHub at <https://github.com/Symbitic/markbook>. Feature requests, issues, and pull requests are all welcome.
 
-[gitbook]: https://www.gitbook.com/
-[mdbook]: https://github.com/rust-lang-nursery/mdBook
+[GitBook]: https://www.gitbook.com/
+[mdBook]: https://github.com/rust-lang-nursery/mdBook
