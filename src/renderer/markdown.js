@@ -1,17 +1,17 @@
+import bibliography from 'remark-bibliography'
+import deflist from 'remark-deflist'
 import frontmatter from 'remark-frontmatter'
 import html from 'rehype-stringify'
-import include from 'remark-include'
+import include from './remark/remark-include'
 import katex from 'rehype-katex'
 import math from 'remark-math'
 import markdown from 'remark-parse'
+import meta from 'remark-meta'
+import redirect from 'remark-redirect'
 import remark2rehype from 'remark-rehype'
+import supersub from 'remark-supersub'
 import unified from 'unified'
 import yamlConfig from 'remark-yaml-config'
-import redirect from 'remark-redirect'
-import meta from 'remark-meta'
-import deflist from 'remark-deflist'
-import supersub from 'remark-supersub'
-import bibliography from 'remark-bibliography'
 
 const createProcessor = () =>
   unified()
