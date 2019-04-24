@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/Symbitic/markbook/compare/v1.4.0...v1.5.0) (2019-04-24)
+
+
+### Bug Fixes
+
+* disable log during serve rebuild ([993de49](https://github.com/Symbitic/markbook/commit/993de49))
+* fix remark-include by using custom plugin ([b59e732](https://github.com/Symbitic/markbook/commit/b59e732))
+* make codeblocks work again ([8134a87](https://github.com/Symbitic/markbook/commit/8134a87))
+* make rerender on change actually work ([85f1ef1](https://github.com/Symbitic/markbook/commit/85f1ef1))
+* rewrite deflist plugin to use pandoc syntax ([a5afbe9](https://github.com/Symbitic/markbook/commit/a5afbe9))
+* watch theme dir for changes ([aa67552](https://github.com/Symbitic/markbook/commit/aa67552))
+
+
+### Features
+
+* add basic bibliography ([5fea836](https://github.com/Symbitic/markbook/commit/5fea836))
+* add subscript/superscript ([c254d22](https://github.com/Symbitic/markbook/commit/c254d22))
+* basic search is working ([75a57b9](https://github.com/Symbitic/markbook/commit/75a57b9))
+
+
+### Reverts
+
+* removed link from reference to citation ([5d9c680](https://github.com/Symbitic/markbook/commit/5d9c680))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/Symbitic/markbook/compare/v1.3.0...v1.4.0) (2019-03-26)
 
