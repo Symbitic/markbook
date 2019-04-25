@@ -37,13 +37,11 @@ export default function init (dir, options) {
   const defaultDir = createPath('default')
   const themeDir = createPath('theme')
 
+  const args = [author, desc, theme, title]
+
   const copyFiles = () =>
     readdir(defaultDir).then(files =>
-      Promise.all(
-        files.map(file =>
-          copy(author, desc, theme, title, defaultDir, dir, file)
-        )
-      )
+      Promise.all(files.map(file => copy(...args, defaultDir, dir, file)))
     )
 
   const copyTheme = () =>
@@ -51,15 +49,7 @@ export default function init (dir, options) {
       ? readdir(themeDir).then(files =>
           Promise.all(
             files.map(file =>
-              copy(
-                author,
-                desc,
-                theme,
-                title,
-                themeDir,
-                path.join(dir, 'theme'),
-                file
-              )
+              copy(...args, themeDir, path.join(dir, 'theme'), file)
             )
           )
         )

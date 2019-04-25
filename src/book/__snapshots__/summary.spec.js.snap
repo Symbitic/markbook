@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`book/summary should parse a basic summary 1`] = `
+Object {
+  "source": "tests/basic/src",
+  "summary": Object {
+    "chapters": Array [
+      Object {
+        "level": 1,
+        "title": "Chapter 1",
+        "url": "chapter-1.md",
+      },
+      Object {
+        "level": 1,
+        "title": "Chapter 2",
+        "url": "chapter-2.md",
+      },
+    ],
+    "header": "Summary",
+    "prefix": Array [
+      Object {
+        "title": "Basic",
+        "url": "README.md",
+      },
+    ],
+    "suffix": Array [],
+  },
+}
+`;
+
+exports[`book/summary should parse even complex summaries 1`] = `
+Object {
+  "source": "tests/summary/complex",
+  "summary": Object {
+    "chapters": Array [
+      Object {
+        "level": 1,
+        "title": "Documentation",
+        "url": "README.md",
+      },
+      Object {
+        "level": 1,
+        "title": "Chapter 2",
+        "url": "chapter-1.md",
+      },
+      Object {
+        "level": 1,
+        "title": "Topic",
+        "url": "topic.md",
+      },
+      Object {
+        "level": 2,
+        "title": "Sub Topic",
+        "url": "sub-topic.md",
+      },
+      Object {
+        "level": 2,
+        "title": "Sub Topic 2",
+        "url": "sub-topic.md",
+      },
+      Object {
+        "level": 3,
+        "title": "Micro topic",
+        "url": "micro-topic.md",
+      },
+      Object {
+        "level": 2,
+        "title": "Sub Topic 3",
+        "url": "sub-topic.md",
+      },
+    ],
+    "header": "Summary",
+    "prefix": Array [
+      Object {
+        "title": "Copyright",
+        "url": "COPYRIGHT.md",
+      },
+      Object {
+        "title": "Prologue",
+        "url": "PROLOGUE.md",
+      },
+      Object {
+        "title": "Authors",
+        "url": "AUTHORS.md",
+      },
+    ],
+    "suffix": Array [
+      Object {
+        "title": "Bibliography",
+        "url": "bibliography.md",
+      },
+    ],
+  },
+}
+`;

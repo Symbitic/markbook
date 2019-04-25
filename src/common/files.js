@@ -13,7 +13,7 @@ const pass = () => true
 
 export const createPath = (...args) =>
   process.env.NODE_ENV === 'test'
-    ? path.resolve(process.cwd(), 'data', ...args)
+    ? path.join('data', ...args)
     : path.resolve(__dirname, '..', 'data', ...args)
 
 export const readFile = (filename, ...args) =>
@@ -32,7 +32,7 @@ export const readdir = dir =>
     .then(subdirs =>
       Promise.all(
         subdirs.map(subdir => {
-          const res = path.resolve(dir, subdir)
+          const res = path.join(dir, subdir)
           return stat(res)
             .then(stats => stats.isDirectory())
             .then(ret => (ret ? readdir(res) : res))

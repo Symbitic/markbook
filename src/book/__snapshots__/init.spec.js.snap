@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`book/init should create a new book 1`] = `
+Object {
+  "book-1/markbook.yml": "title: The Bible
+description: \\"The (nonliteral) word of God\\"
+authors: [ 'The Israelites' ]
+",
+  "book-1/src/README.md": "# The Bible
+This is your book.
+",
+  "book-1/src/SUMMARY.md": "# Summary
+[The Bible](README.md)
+* [Chapter 1](chapter-1.md)
+",
+  "book-1/src/chapter-1.md": "# Chapter 1
+This is the first chapter.
+",
+}
+`;

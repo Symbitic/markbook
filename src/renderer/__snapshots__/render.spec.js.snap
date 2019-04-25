@@ -1,0 +1,1426 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderer/render should render a basic book 1`] = `
+Object {
+  "/home/ec2-user/environment/node/markbook/book-1/.nojekyll": "This file makes sure that Github Pages doesn't process Markbook's output.
+",
+  "/home/ec2-user/environment/node/markbook/book-1/favicon.png": Object {
+    "data": Array [
+      137,
+      80,
+      78,
+      71,
+      13,
+      10,
+      26,
+      10,
+      0,
+      0,
+      0,
+      13,
+      73,
+      72,
+      68,
+      82,
+      0,
+      0,
+      0,
+      144,
+      0,
+      0,
+      0,
+      144,
+      8,
+      4,
+      0,
+      0,
+      0,
+      77,
+      79,
+      42,
+      51,
+      0,
+      0,
+      4,
+      14,
+      73,
+      68,
+      65,
+      84,
+      120,
+      1,
+      237,
+      220,
+      99,
+      116,
+      3,
+      141,
+      22,
+      134,
+      209,
+      93,
+      94,
+      219,
+      182,
+      109,
+      219,
+      182,
+      109,
+      219,
+      182,
+      109,
+      127,
+      182,
+      109,
+      219,
+      182,
+      109,
+      215,
+      72,
+      206,
+      117,
+      155,
+      89,
+      205,
+      180,
+      141,
+      218,
+      174,
+      53,
+      231,
+      125,
+      254,
+      182,
+      193,
+      78,
+      227,
+      52,
+      98,
+      209,
+      50,
+      145,
+      37,
+      80,
+      2,
+      37,
+      208,
+      226,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      101,
+      9,
+      148,
+      64,
+      9,
+      148,
+      64,
+      9,
+      148,
+      64,
+      9,
+      148,
+      64,
+      89,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      214,
+      184,
+      62,
+      207,
+      242,
+      39,
+      39,
+      25,
+      23,
+      21,
+      109,
+      220,
+      137,
+      254,
+      228,
+      89,
+      250,
+      52,
+      217,
+      99,
+      28,
+      42,
+      254,
+      83,
+      118,
+      168,
+      199,
+      40,
+      206,
+      251,
+      76,
+      137,
+      185,
+      178,
+      73,
+      239,
+      211,
+      176,
+      247,
+      170,
+      139,
+      66,
+      89,
+      221,
+      123,
+      0,
+      30,
+      109,
+      82,
+      100,
+      11,
+      154,
+      244,
+      40,
+      224,
+      160,
+      196,
+      40,
+      233,
+      64,
+      120,
+      186,
+      40,
+      166,
+      230,
+      6,
+      215,
+      87,
+      176,
+      27,
+      212,
+      68,
+      49,
+      79,
+      227,
+      247,
+      69,
+      28,
+      63,
+      116,
+      123,
+      85,
+      221,
+      237,
+      253,
+      80,
+      189,
+      224,
+      241,
+      123,
+      142,
+      19,
+      13,
+      253,
+      64,
+      213,
+      247,
+      131,
+      130,
+      199,
+      113,
+      140,
+      20,
+      254,
+      126,
+      110,
+      163,
+      234,
+      187,
+      109,
+      225,
+      138,
+      54,
+      162,
+      240,
+      39,
+      117,
+      53,
+      114,
+      215,
+      138,
+      185,
+      234,
+      68,
+      67,
+      87,
+      34,
+      119,
+      77,
+      193,
+      36,
+      129,
+      18,
+      40,
+      129,
+      18,
+      40,
+      129,
+      18,
+      40,
+      129,
+      18,
+      104,
+      137,
+      37,
+      208,
+      141,
+      221,
+      191,
+      180,
+      59,
+      107,
+      111,
+      119,
+      115,
+      255,
+      210,
+      134,
+      181,
+      178,
+      155,
+      185,
+      127,
+      105,
+      183,
+      91,
+      25,
+      160,
+      167,
+      137,
+      210,
+      70,
+      60,
+      92,
+      235,
+      123,
+      170,
+      41,
+      81,
+      218,
+      131,
+      180,
+      178,
+      87,
+      138,
+      210,
+      126,
+      178,
+      250,
+      64,
+      225,
+      76,
+      183,
+      209,
+      218,
+      238,
+      234,
+      18,
+      81,
+      29,
+      160,
+      176,
+      179,
+      126,
+      203,
+      223,
+      176,
+      131,
+      69,
+      181,
+      128,
+      194,
+      247,
+      45,
+      127,
+      127,
+      18,
+      213,
+      3,
+      170,
+      123,
+      141,
+      229,
+      237,
+      253,
+      162,
+      138,
+      64,
+      225,
+      122,
+      15,
+      177,
+      244,
+      158,
+      100,
+      178,
+      170,
+      64,
+      225,
+      52,
+      183,
+      178,
+      248,
+      238,
+      228,
+      34,
+      81,
+      93,
+      160,
+      176,
+      189,
+      126,
+      229,
+      27,
+      114,
+      128,
+      168,
+      54,
+      80,
+      248,
+      150,
+      242,
+      253,
+      78,
+      36,
+      80,
+      205,
+      43,
+      52,
+      223,
+      187,
+      132,
+      4,
+      18,
+      174,
+      243,
+      64,
+      11,
+      247,
+      56,
+      19,
+      9,
+      244,
+      255,
+      78,
+      118,
+      11,
+      197,
+      221,
+      209,
+      249,
+      34,
+      129,
+      230,
+      219,
+      70,
+      159,
+      249,
+      13,
+      218,
+      71,
+      36,
+      80,
+      177,
+      175,
+      153,
+      223,
+      175,
+      132,
+      4,
+      82,
+      172,
+      230,
+      37,
+      128,
+      183,
+      137,
+      4,
+      106,
+      214,
+      53,
+      238,
+      143,
+      199,
+      24,
+      79,
+      160,
+      178,
+      78,
+      112,
+      47,
+      231,
+      138,
+      4,
+      42,
+      111,
+      68,
+      36,
+      80,
+      103,
+      37,
+      80,
+      2,
+      237,
+      234,
+      18,
+      209,
+      114,
+      103,
+      218,
+      191,
+      42,
+      64,
+      255,
+      240,
+      52,
+      83,
+      162,
+      165,
+      70,
+      60,
+      194,
+      246,
+      213,
+      1,
+      226,
+      35,
+      162,
+      133,
+      234,
+      222,
+      72,
+      181,
+      128,
+      248,
+      71,
+      11,
+      64,
+      63,
+      161,
+      101,
+      160,
+      65,
+      159,
+      247,
+      237,
+      146,
+      54,
+      21,
+      165,
+      29,
+      84,
+      250,
+      91,
+      223,
+      114,
+      199,
+      149,
+      4,
+      186,
+      177,
+      195,
+      197,
+      178,
+      218,
+      195,
+      64,
+      27,
+      64,
+      188,
+      74,
+      77,
+      116,
+      177,
+      31,
+      177,
+      146,
+      64,
+      220,
+      221,
+      229,
+      98,
+      201,
+      206,
+      113,
+      59,
+      218,
+      2,
+      226,
+      179,
+      162,
+      107,
+      109,
+      169,
+      111,
+      165,
+      129,
+      120,
+      166,
+      105,
+      177,
+      104,
+      99,
+      30,
+      77,
+      219,
+      64,
+      252,
+      73,
+      116,
+      165,
+      195,
+      220,
+      132,
+      149,
+      7,
+      226,
+      19,
+      66,
+      121,
+      117,
+      111,
+      165,
+      35,
+      160,
+      65,
+      187,
+      139,
+      142,
+      59,
+      207,
+      157,
+      88,
+      29,
+      32,
+      214,
+      23,
+      165,
+      253,
+      130,
+      14,
+      129,
+      184,
+      149,
+      19,
+      69,
+      71,
+      93,
+      231,
+      225,
+      172,
+      30,
+      208,
+      77,
+      28,
+      45,
+      154,
+      182,
+      183,
+      129,
+      46,
+      0,
+      113,
+      111,
+      151,
+      137,
+      182,
+      155,
+      241,
+      34,
+      86,
+      19,
+      136,
+      123,
+      185,
+      162,
+      233,
+      159,
+      245,
+      29,
+      232,
+      10,
+      16,
+      79,
+      50,
+      46,
+      218,
+      236,
+      195,
+      172,
+      54,
+      16,
+      207,
+      53,
+      35,
+      10,
+      141,
+      123,
+      28,
+      93,
+      3,
+      226,
+      13,
+      234,
+      162,
+      141,
+      126,
+      201,
+      106,
+      2,
+      149,
+      223,
+      33,
+      191,
+      147,
+      174,
+      2,
+      241,
+      101,
+      209,
+      114,
+      219,
+      233,
+      95,
+      43,
+      64,
+      108,
+      44,
+      230,
+      250,
+      45,
+      93,
+      7,
+      234,
+      179,
+      142,
+      104,
+      169,
+      163,
+      221,
+      140,
+      181,
+      3,
+      116,
+      211,
+      185,
+      127,
+      181,
+      218,
+      223,
+      96,
+      15,
+      128,
+      24,
+      110,
+      233,
+      189,
+      146,
+      11,
+      221,
+      149,
+      181,
+      4,
+      196,
+      125,
+      92,
+      37,
+      92,
+      232,
+      78,
+      244,
+      4,
+      136,
+      219,
+      56,
+      77,
+      44,
+      171,
+      17,
+      143,
+      102,
+      173,
+      1,
+      241,
+      66,
+      163,
+      158,
+      72,
+      207,
+      128,
+      184,
+      159,
+      43,
+      197,
+      146,
+      205,
+      122,
+      57,
+      107,
+      17,
+      136,
+      251,
+      208,
+      83,
+      32,
+      158,
+      110,
+      82,
+      44,
+      209,
+      167,
+      88,
+      171,
+      64,
+      122,
+      14,
+      196,
+      219,
+      212,
+      69,
+      121,
+      126,
+      79,
+      181,
+      129,
+      248,
+      150,
+      40,
+      109,
+      23,
+      3,
+      9,
+      212,
+      103,
+      35,
+      209,
+      180,
+      227,
+      221,
+      130,
+      4,
+      226,
+      70,
+      14,
+      20,
+      11,
+      186,
+      196,
+      61,
+      73,
+      32,
+      224,
+      246,
+      206,
+      20,
+      133,
+      198,
+      60,
+      129,
+      4,
+      154,
+      223,
+      131,
+      10,
+      103,
+      174,
+      230,
+      181,
+      36,
+      80,
+      113,
+      207,
+      105,
+      120,
+      251,
+      233,
+      11,
+      36,
+      208,
+      194,
+      189,
+      71,
+      252,
+      167,
+      191,
+      145,
+      64,
+      205,
+      247,
+      67,
+      97,
+      47,
+      67,
+      107,
+      233,
+      255,
+      197,
+      238,
+      168,
+      189,
+      221,
+      165,
+      75,
+      255,
+      47,
+      86,
+      92,
+      159,
+      31,
+      186,
+      53,
+      189,
+      2,
+      202,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      33,
+      129,
+      150,
+      252,
+      14,
+      179,
+      252,
+      14,
+      179,
+      27,
+      196,
+      92,
+      53,
+      183,
+      83,
+      245,
+      221,
+      94,
+      77,
+      204,
+      117,
+      3,
+      199,
+      138,
+      134,
+      126,
+      172,
+      234,
+      251,
+      113,
+      193,
+      227,
+      88,
+      126,
+      43,
+      26,
+      170,
+      251,
+      169,
+      187,
+      232,
+      215,
+      87,
+      193,
+      250,
+      221,
+      197,
+      207,
+      212,
+      11,
+      30,
+      191,
+      229,
+      169,
+      162,
+      152,
+      186,
+      105,
+      83,
+      21,
+      108,
+      90,
+      93,
+      20,
+      243,
+      20,
+      148,
+      254,
+      163,
+      118,
+      182,
+      63,
+      240,
+      8,
+      19,
+      98,
+      65,
+      217,
+      132,
+      71,
+      0,
+      188,
+      83,
+      93,
+      20,
+      202,
+      106,
+      222,
+      161,
+      97,
+      239,
+      204,
+      191,
+      162,
+      66,
+      19,
+      222,
+      169,
+      56,
+      143,
+      204,
+      219,
+      162,
+      185,
+      246,
+      247,
+      72,
+      77,
+      247,
+      84,
+      191,
+      115,
+      172,
+      235,
+      205,
+      170,
+      85,
+      176,
+      89,
+      215,
+      59,
+      214,
+      239,
+      60,
+      85,
+      227,
+      98,
+      209,
+      50,
+      145,
+      37,
+      80,
+      2,
+      117,
+      84,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      150,
+      64,
+      9,
+      148,
+      64,
+      9,
+      148,
+      64,
+      9,
+      148,
+      64,
+      9,
+      148,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      37,
+      80,
+      2,
+      101,
+      255,
+      4,
+      193,
+      219,
+      220,
+      39,
+      77,
+      174,
+      7,
+      43,
+      0,
+      0,
+      0,
+      0,
+      73,
+      69,
+      78,
+      68,
+      174,
+      66,
+      96,
+      130,
+    ],
+    "type": "Buffer",
+  },
+  "/home/ec2-user/environment/node/markbook/book-1/markbook.css": "@charset \\"utf-8\\";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text|Roboto');
+
+html {
+  color: #333333;
+  background-color: #ffffff;
+  text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Crimson Text', 'Roboto', sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: 'Source Code Pro', Consolas, 'Ubuntu Mono', Menlo,
+    'DejaVu Sans Mono', monospace, monospace;
+  font-size: 0.875em;
+}
+
+a,
+a:visited,
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.section {
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 0px;
+}
+
+.is-wrapped {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.has-wrapped-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-list a,
+.menu-list a:visited,
+.menu-list a:hover {
+  color: black;
+  font-size: 0.8em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container > .input:first-child {
+  margin-bottom: 0.5em;
+}
+
+.container > h1:nth-child(3) {
+  margin-top: 0;
+}
+
+#search-results p {
+  margin-bottom: 0px;
+}
+
+#search-results li {
+  margin: 0;
+}
+
+#search-results ul {
+  list-style: none;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.level-2 {
+  margin-left: 0.75em;
+}
+
+#search-header {
+  font-weight: bold;
+  font-size: 1em;
+  padding: 18px 0 0 5px;
+  color: #666;
+}
+
+#search-results {
+  list-style: none;
+  /* padding-left: 20px;*/
+  /*padding-left: 0.75em;*/
+}
+
+.teaser {
+  display: block;
+  clear: both;
+  margin: 5px 0 0 25px;
+  font-size: 0.8em;
+}
+
+.content h1:not(:first-child) {
+  margin-top: 0px;
+}
+",
+  "/home/ec2-user/environment/node/markbook/book-1/markbook.js": "/* global EventSource, index */
+
+// Store elements for faster ops.
+var searchHeader = document.getElementById('search-header')
+var searchResults = document.getElementById('search-results')
+var searchbar = document.getElementById('searchbar')
+var searchbarToggle = document.getElementById('searchbar-toggle')
+var search = document.getElementById('search')
+var sidebar = document.getElementById('sidebar')
+var sidebarToggle = document.getElementById('sidebar-toggle')
+var content = document.getElementById('content')
+
+function togglesearch () {
+  var enabled = searchbarToggle.getAttribute('aria-expanded') === 'true'
+
+  if (enabled) {
+    searchbarToggle.setAttribute('aria-expanded', 'false')
+    searchbar.value = ''
+    search.classList.add('hidden')
+  } else {
+    searchbarToggle.setAttribute('aria-expanded', 'true')
+    search.classList.remove('hidden')
+    searchbar.focus()
+  }
+}
+
+function togglesidebar () {
+  var enabled = sidebarToggle.getAttribute('aria-expanded') === 'true'
+
+  // Ordering is important
+  if (enabled) {
+    sidebarToggle.setAttribute('aria-expanded', 'false')
+    sidebar.classList.add('hidden')
+    content.classList.replace('is-10', 'is-12')
+  } else {
+    sidebarToggle.setAttribute('aria-expanded', 'true')
+    content.classList.replace('is-12', 'is-10')
+    sidebar.classList.remove('hidden')
+  }
+}
+
+function oninput (evt) {
+  if (evt.target.value.length < 3) {
+    searchHeader.innerHTML = ''
+    searchResults.innerHTML = ''
+    return
+  }
+  var results = index.search(evt.target.value, 15).map(result => {
+    var contents = result.contents.split(/\\\\s/).filter(str => str.length)
+    var idx = contents.indexOf(evt.target.value)
+    var start = Math.max(idx - 10, 0)
+    var end = Math.min(idx + 15, contents.length - 1)
+    var regex = new RegExp(evt.target.value, 'gi')
+    var str = contents
+      .slice(start, end)
+      .join(' ')
+      .replace(regex, '<strong>$&</strong>')
+    var file =
+      result.file.length > 0 && result.title.length > 0
+        ? '<a href=\\"' + result.file + '\\">' + result.title + '</a>'
+        : ''
+    var teaser =
+      str.length > 0 && str.indexOf(evt.target.value) !== -1
+        ? '<span class=\\"teaser\\">' + str + '</span>'
+        : ''
+    return '<li>'
+      .concat(file)
+      .concat(teaser)
+      .concat('</li>')
+      .replace('<li></li>', '')
+  })
+  searchHeader.innerHTML =
+    String(results.length) + ' results for \\"' + evt.target.value + '\\"'
+  searchResults.innerHTML = results.join('')
+}
+
+function clear (evt) {
+  var enabled = searchbarToggle.getAttribute('aria-expanded') === 'true'
+  if (enabled) {
+    if (evt.key === 'Escape') {
+      searchHeader.innerHTML = ''
+      searchResults.innerHTML = ''
+      searchbar.value = ''
+      document.activeElement.blur()
+    }
+  }
+}
+
+function reload () {
+  // window.location.reload(true);
+}
+
+function onload () {
+  if (searchbarToggle) {
+    searchbarToggle.addEventListener('click', togglesearch)
+  }
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', togglesidebar)
+  }
+  if (searchbar) {
+    searchbar.addEventListener('input', oninput)
+    searchbar.addEventListener('keyup', clear)
+  }
+
+  // We can't make this mobile-first because then this can't be rendered
+  // server-side.
+  if (window.screen.width < 1024) {
+    togglesidebar()
+  }
+
+  var sse = new EventSource('/sse')
+  sse.addEventListener('reload', reload)
+}
+
+window.addEventListener('DOMContentLoaded', onload)
+",
+  "book-1/chapter-1.html": "<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Generated using Markbook -->
+    <meta charset=\\"UTF-8\\">
+    <title>Book 1 - My Chapter</title>
+    <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
+    <meta name=\\"description\\" content=\\"\\">
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">
+    <meta name=\\"theme-color\\" content=\\"#ffffff\\" />
+    
+    <link rel=\\"shortcut icon\\" href=\\"favicon.png\\">
+    <link rel=\\"stylesheet\\" href=\\"https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css\\" integrity=\\"sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=\\" crossorigin=\\"anonymous\\">
+    <link rel=\\"stylesheet\\" href=\\"https://use.fontawesome.com/releases/v5.7.2/css/all.css\\" integrity=\\"sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=\\" crossorigin=\\"anonymous\\">
+    <link rel=\\"stylesheet\\" href=\\"markbook.css\\">
+    <script src=\\"https://cdnjs.cloudflare.com/ajax/libs/FlexSearch/0.6.2/flexsearch.min.js\\" integrity=\\"sha256-zbQelJJsxMAt4Xp4ZyvXxZbl136IPBfjg2L6di31FY4=\\" crossorigin=\\"anonymous\\"></script>
+  </head>
+  <body>
+    <div class=\\"columns is-mobile is-vcentered\\">
+      <!-- Show/Hide Searchbar -->
+      <div class=\\"column is-narrow\\">
+        <span id=\\"searchbar-toggle\\" class=\\"icon is-medium\\" aria-controls=\\"searchbar\\" aria-expanded=\\"false\\" aria-label=\\"Toggle Searchbar\\">
+          <span aria-hidden=\\"true\\" class=\\"fas fa-search\\"></span>
+        </span>
+      </div>
+      
+      <!-- Chapter Title -->
+      <div class=\\"column is-wrapped has-text-centered\\">
+        <p class=\\"title has-wrapped-overflow has-text-grey-lighter\\">
+          Book 1
+        </p>
+      </div>
+
+      <!-- Show/Hide Table of Contents -->
+      <div class=\\"column has-text-left is-narrow\\">
+        <span id=\\"sidebar-toggle\\" class=\\"icon is-medium\\" aria-controls=\\"sidebar\\" aria-expanded=\\"true\\" aria-label=\\"Toggle Table of Contents\\">
+          <span aria-hidden=\\"true\\" class=\\"fas fa-bars\\"></span>
+        </span>
+      </div>
+    </div>
+    
+    <section class=\\"section\\">
+      <div class=\\"columns\\">
+        <div id=\\"sidebar\\" class=\\"column is-2 is-paddingless is-info\\">
+          <aside class=\\"is-medium menu\\" aria-label=\\"Table of Contents\\">
+            <ul class=\\"menu-list\\">
+              <li class=\\"level-1\\"><a href=\\"chapter-1.html\\">
+                <strong aria-hidden=\\"true\\">1.</strong>
+                Chapter 1
+              </a></li>
+
+            </ul>
+          </aside>
+        </div>
+        <div id=\\"content\\" class=\\"column is-10\\">
+          <div class=\\"content is-medium\\">
+            <div class=\\"container\\">
+              <div id=\\"search\\" class=\\"hidden\\">
+                <input id=\\"searchbar\\" class=\\"input is-rounded is-small\\" type=\\"text\\" placeholder=\\"Search...\\">
+                <div id=\\"search-header\\"></div>
+                <ul id=\\"search-results\\"></ul>
+              </div>
+              <h1>Chapter 1</h1>
+<p>Markbook is a replacement for <a href=\\"https://www.gitbook.com/\\">GitBook</a> and <a href=\\"https://github.com/rust-lang-nursery/mdBook\\">mdBook</a>.</p>
+<p>Link to <a href=\\"index.html\\">Main Page</a></p>
+<p>Markbook
+: A CommonMark book generator.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src=\\"search.js\\"></script>
+    <script src=\\"markbook.js\\"></script>
+  </body>
+</html>
+",
+  "book-1/search.js": "// Autogenerated. Do not edit.
+var data = [{\\"id\\":0,\\"file\\":\\"chapter-1.html\\",\\"title\\":\\"Chapter 1\\",\\"contents\\":\\"  title: My Chapter  myval: 3  Chapter 1  Markbook is a replacement for GitBook and mdBook.  Link to Main Page  Markbook : A CommonMark book generator.\\"}];
+var index = new FlexSearch({
+  doc: {
+    id: 'id',
+    field: [
+      \\"file\\",
+      \\"contents\\"
+    ]
+  }
+});
+index.add(data);
+",
+}
+`;

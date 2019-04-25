@@ -19,7 +19,10 @@ const chapters = {
   suffix: []
 }
 
-const tests = [['basic prefix', basicPrefix], ['list of chapters', chapters]]
+const case1 = ['basic prefix', basicPrefix]
+const case2 = ['list of chapters', chapters]
+
+const tests = [case1, case2]
 
 describe.each(tests)('toc', (name, source) => {
   it(`should parse a ${name}`, () => {

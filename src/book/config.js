@@ -46,9 +46,11 @@ export default function (result) {
 
   const ret = { ...result, config: value }
 
-  const root = path.dirname(ret.filepath)
-  const source = path.resolve(root, ret.config.src || 'src')
-  const destination = path.resolve(root, ret.config.build || 'book')
+  const filepath = path.relative(process.cwd(), ret.filepath)
+
+  const root = path.dirname(filepath)
+  const source = path.join(root, ret.config.src || 'src')
+  const destination = path.join(root, ret.config.build || 'book')
   const theme =
     ret.config.theme && ret.config.theme.length
       ? path.join(root, ret.config.theme)
@@ -63,7 +65,7 @@ export default function (result) {
     version: ret.config.version,
     description: ret.config.description,
     authors: ret.config.authors,
-    config: ret.filepath,
+    config: filepath,
     summary: {
       prefix: [],
       chapters: [],

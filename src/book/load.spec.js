@@ -1,11 +1,12 @@
-/* global expect, fixtures */
+/* eslint-env jest */
 import load from './load'
+import path from 'path'
 
 describe('load', () => {
   it('should parse basic correctly', () => {
     expect.assertions(1)
-    const fixture = fixtures('basic')
-    const yaml = fixtures('basic', 'markbook.yml')
+    const fixture = path.join('tests', 'basic')
+    const yaml = path.join(fixture, 'markbook.yml')
     return expect(load(fixture)).resolves.toMatchObject({
       title: 'Basic',
       version: '0.1.0',
@@ -18,7 +19,7 @@ describe('load', () => {
 
   it('should return an error when config is empty', () => {
     expect.assertions(1)
-    const fixture = fixtures('empty')
+    const fixture = path.join('tests', 'empty')
 
     return expect(load(fixture)).rejects.toMatchObject({
       message: expect.stringMatching(/^Config file not found or empty$/)
@@ -27,7 +28,7 @@ describe('load', () => {
 
   it('requires version to be semver-compatible', () => {
     expect.assertions(1)
-    const fixture = fixtures('bad-version')
+    const fixture = path.join('tests', 'bad-version')
 
     return expect(load(fixture)).rejects.toMatchObject({
       message: expect.stringMatching(/^invalid "version"$/)
@@ -36,7 +37,7 @@ describe('load', () => {
 
   it('requires a title', () => {
     expect.assertions(1)
-    const fixture = fixtures('missing-title')
+    const fixture = path.join('tests', 'missing-title')
 
     return expect(load(fixture)).rejects.toMatchObject({
       message: expect.stringMatching(/^missing "title"$/)
@@ -45,7 +46,7 @@ describe('load', () => {
 
   it('requires authors', () => {
     expect.assertions(1)
-    const fixture = fixtures('missing-authors')
+    const fixture = path.join('tests', 'missing-authors')
 
     return expect(load(fixture)).rejects.toMatchObject({
       message: expect.stringMatching(/^missing "authors"$/)
