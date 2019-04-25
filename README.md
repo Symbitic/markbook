@@ -9,7 +9,7 @@
 
 Markbook allows full books to be written in CommonMark.
 
-Read the user guide on <https://symbitic.github.io/markbook/>
+Read the user guide on <https://symbitic.github.io/markbook/>.
 
 If you like this project, please consider doing one of the following:
 * Starring me on GitHub
