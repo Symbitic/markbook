@@ -1,32 +1,22 @@
-import inquirer from 'inquirer'
 import { createPath, readdir, readFile, writeFile } from '../common/files'
 import path from 'path'
+import { reject } from '../common/errors'
 import { status } from '../common/log'
 
-const copyFile = ({ title, desc, author, defaultDir, dir }) => input => {
+const copy = (author, desc, theme, title, origin, dir, file) => {
   const replace = data =>
     data
       .toString()
       .replace(/@TITLE@/g, title)
       .replace(/@DESC@/g, desc)
       .replace(/@AUTHOR@/g, author)
+      .replace(/@THEME@/g, theme ? 'theme: "theme"' : '')
+      .replace(/\n\n/g, '\n')
 
-  const name = path.relative(defaultDir, input)
+  const name = path.relative(origin, file)
   const output = path.join(dir, name)
 
-  return readFile(input).then(data => writeFile(output, replace(data)))
-}
-
-function copyFiles (dir, answers) {
-  const defaultDir = createPath('default')
-
-  const copy = copyFile({
-    ...answers,
-    dir,
-    defaultDir
-  })
-
-  return readdir(defaultDir).then(files => Promise.all(files.map(copy)))
+  return readFile(file).then(data => writeFile(output, replace(data)))
 }
 
 /**
@@ -34,49 +24,46 @@ function copyFiles (dir, answers) {
  * @param {!string} dir Path to create a new book in.
  */
 export default function init (dir, options) {
-  // TODO: if (options.theme === true)
+  const { author, desc, theme, title } = options
 
-  const { title, author, description } = options
-  const defaultAnswers = {
-    author,
-    desc: description,
-    title
+  if (!author) {
+    return reject('Missing "author" field')
+  } else if (!desc) {
+    return reject('Missing "desc" field')
+  } else if (!title) {
+    return reject('Missing "title" field')
   }
 
-  const questions = []
-    .concat(
-      !title && {
-        type: 'input',
-        name: 'title',
-        message: 'Enter book title:',
-        validate: val => (val && val.length ? true : 'Must enter a book title')
-      }
-    )
-    .concat(
-      !description && {
-        type: 'input',
-        name: 'desc',
-        message: 'Enter book description:'
-      }
-    )
-    .concat(
-      !author && {
-        type: 'input',
-        name: 'author',
-        message: 'Enter author name:',
-        validate: val =>
-          val && val.length ? true : 'Must enter an author name'
-      }
-    )
-    .filter(i => typeof i === 'object')
+  const defaultDir = createPath('default')
+  const themeDir = createPath('theme')
 
-  return inquirer
-    .prompt(questions)
-    .then(answers =>
-      copyFiles(dir, {
-        ...defaultAnswers,
-        ...answers
-      })
+  const copyFiles = () =>
+    readdir(defaultDir).then(files =>
+      Promise.all(
+        files.map(file =>
+          copy(author, desc, theme, title, defaultDir, dir, file)
+        )
+      )
     )
-    .then(() => status('Finished'))
+
+  const copyTheme = () =>
+    theme
+      ? readdir(themeDir).then(files =>
+          Promise.all(
+            files.map(file =>
+              copy(
+                author,
+                desc,
+                theme,
+                title,
+                themeDir,
+                path.join(dir, 'theme'),
+                file
+              )
+            )
+          )
+        )
+      : Promise.resolve()
+
+  return Promise.all([copyFiles(), copyTheme()]).then(() => status('Finished'))
 }

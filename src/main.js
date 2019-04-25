@@ -37,10 +37,10 @@ commander
 commander
   .command('init [dir]')
   .description('Create a new book')
-  .option('-a --author [author]', 'Author name')
+  .option('-a, --author [author]', 'Author name')
   .option('-T, --title [title]', 'Book title')
-  .option('-d, --description [desc]', 'Book description')
-  .option('-t, --theme [theme]', 'Copy [theme] to the directory')
+  .option('-d, --desc [desc]', 'Book description')
+  .option('-t, --theme', 'Copy the theme to the directory')
   .action(init)
 
 commander
