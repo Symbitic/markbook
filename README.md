@@ -66,6 +66,3 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 Licensed under the [MIT](https://spdx.org/licenses/MIT) license. See [LICENSE.md](LICENSE.md) for more details.
 
 Copyright &copy; 2018-2019 [Markbook Contributors](https://github.com/Symbitic/markbook/graphs/contributors)
-
-[3]: https://spdx.org/licenses/MIT
-[4]: https://github.com/Symbitic/markbook/graphs/contributors
