@@ -2,9 +2,9 @@
 
 exports[`renderer/render should render a basic book 1`] = `
 Object {
-  "/home/ec2-user/environment/node/markbook/book-1/.nojekyll": "This file makes sure that Github Pages doesn't process Markbook's output.
+  "/book-1/.nojekyll": "This file makes sure that Github Pages doesn't process Markbook's output.
 ",
-  "/home/ec2-user/environment/node/markbook/book-1/favicon.png": Object {
+  "/book-1/favicon.png": Object {
     "data": Array [
       137,
       80,
@@ -1104,7 +1104,7 @@ Object {
     ],
     "type": "Buffer",
   },
-  "/home/ec2-user/environment/node/markbook/book-1/markbook.css": "@charset \\"utf-8\\";
+  "/book-1/markbook.css": "@charset \\"utf-8\\";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text|Roboto');
 
 html {
@@ -1215,7 +1215,7 @@ a:hover {
   margin-top: 0px;
 }
 ",
-  "/home/ec2-user/environment/node/markbook/book-1/markbook.js": "/* global EventSource, index */
+  "/book-1/markbook.js": "/* global EventSource, index */
 
 // Store elements for faster ops.
 var searchHeader = document.getElementById('search-header')
