@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Generated using Markbook -->
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+    {{#if root}}<base href="{{ root }}">{{/if}}
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+    <link rel="stylesheet" href="markbook.css">
+  </head>
+  <body>
+    <div class="columns is-mobile is-vcentered">
+      <!-- Chapter Title -->
+      <div class="column is-wrapped has-text-centered">
+        <p class="title has-wrapped-overflow has-text-grey-lighter">
+          {{ book_title }}
+        </p>
+      </div>
+    </div>
+    
+    <section class="section">
+      <div class="columns">
+        <div id="content" class="column">
+          <div class="content is-medium">
+            <div class="container">
+{{{ content }}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

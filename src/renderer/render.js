@@ -1,5 +1,5 @@
 /**
- * Render Commonmark.
+ * Render CommonMark.
  */
 import path from 'path'
 import { status } from '../common/log'
@@ -9,9 +9,11 @@ import createProcessor from './markdown'
 import createToc from './toc'
 import search from './search'
 
-const renderFile = (file, processor) => readVFile(file).then(processor.process)
+const processFile = (file, processor) => readVFile(file).then(processor.process)
 
-function write (file, config, template, vfile) {
+const mapP = (input, cb) => Promise.all(input.map(cb))
+
+function write (name, config, template, vfile) {
   const content = vfile.contents.toString()
 
   // Make sure we don't end up with a title like "Markbook - Markbook"
@@ -22,7 +24,7 @@ function write (file, config, template, vfile) {
     : config.title
 
   // Replace ".md" with ".html" and use "index.html" instead of "README.md"
-  const filename = file.url
+  const filename = name
     .replace(/README\.md$/, 'index.md')
     .replace(/\.md$/, '')
     .concat('.html')
@@ -47,17 +49,20 @@ function write (file, config, template, vfile) {
 }
 
 const renderFiles = (config, processor, theme, files) => {
-  const cb = file => {
+  const readFiles = file => {
     const input = path.join(config.source, file.url)
-    return renderFile(input, processor).then(vfile =>
-      write(file, config, theme.template, vfile)
-    )
+    return processFile(input, processor).then(vfile => [vfile, file.url])
   }
 
-  return Promise.all(files.map(cb)).then(theme.copy)
+  const writeFiles = ([vfile, name]) =>
+    write(name, config, theme.template, vfile).then(() => vfile)
+
+  return mapP(files, readFiles)
+    .then(vfiles => mapP(vfiles, writeFiles))
+    .then(theme.copy)
 }
 
-export default async function render (config) {
+export default function render (config) {
   const files = [
     ...config.summary.prefix,
     ...config.summary.chapters,

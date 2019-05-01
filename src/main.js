@@ -4,6 +4,7 @@ import build from './cmd/build'
 import clean from './cmd/clean'
 import init from './cmd/init'
 import serve from './cmd/serve'
+import print from './cmd/print'
 
 commander
   // Add version
@@ -61,6 +62,11 @@ commander
   )
   .option('-o, --open', 'Open in the book in a web browser')
   .action(serve)
+
+commander
+  .command('print [dir]')
+  .description('Render to a PDF file')
+  .action(print)
 
 commander.parse(process.argv)
 if (!commander.args.length || typeof commander.args[1] !== 'object') {
