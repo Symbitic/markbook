@@ -1,7 +1,7 @@
 import path from 'path'
 import render from '../renderer/render'
 import load from '../book/load'
-import createServer from '../server/serve'
+import createServer from '../backends/server'
 import { handleErrors } from '../common/errors'
 import { status } from '../common/log'
 
