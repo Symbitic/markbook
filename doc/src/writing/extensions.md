@@ -26,8 +26,8 @@ Supported metadata fields include:
 | Title | Description |
 | ----- | ----------- |
 | `title` | Chapter title |
-| `bibliography` | Bibliography (see [below](#bibliography)) |
-| `style` | Citation style for [bibliographies](#bibliography) |
+| `bibliography` | Bibliography (see below) |
+| `style` | Citation style for bibliographies |
 
 ## Superscript/Subscript
 
