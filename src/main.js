@@ -2,9 +2,10 @@ import commander from 'commander'
 import { description, version } from '../package.json'
 import build from './cmd/build'
 import clean from './cmd/clean'
+import epub from './cmd/epub'
 import init from './cmd/init'
-import serve from './cmd/serve'
 import print from './cmd/print'
+import serve from './cmd/serve'
 
 commander
   // Add version
@@ -36,6 +37,11 @@ commander
   .action(clean)
 
 commander
+  .command('epub [dir]')
+  .description('Generate an ePub file')
+  .action(epub)
+
+commander
   .command('init [dir]')
   .description('Create a new book')
   .option('-a, --author [author]', 'Author name')
@@ -43,6 +49,11 @@ commander
   .option('-d, --desc [desc]', 'Book description')
   .option('-t, --theme', 'Copy the theme to the directory')
   .action(init)
+
+commander
+  .command('print [dir]')
+  .description('Render to a PDF file')
+  .action(print)
 
 commander
   .command('serve [dir]')
@@ -62,11 +73,6 @@ commander
   )
   .option('-o, --open', 'Open in the book in a web browser')
   .action(serve)
-
-commander
-  .command('print [dir]')
-  .description('Render to a PDF file')
-  .action(print)
 
 commander.parse(process.argv)
 if (!commander.args.length || typeof commander.args[1] !== 'object') {

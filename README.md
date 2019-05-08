@@ -39,6 +39,8 @@ Alternately, Markbook can be built manually:
 * Generate HTML from CommonMark files and a Handlebars theme.
 * Table of Contents.
 * Mobile-friendly interface.
+* Generate PDF (requires Chrome or Chromium installed)
+* Generate EPUB (very basic for the moment).
 
 ### Planned
 
@@ -52,8 +54,6 @@ Alternately, Markbook can be built manually:
 * [ ] Find typeface for ebooks (Amazon Kindle and Google Play Books each has custom typeface specific for reading ebooks).
 * [ ] Mermaid, graphviz, or PlantUML diagrams.
 * [ ] Add Pandoc/rmarkdown extensions.
-* [ ] Generate ePub (archiver, quick-epub, epub-zipper, or epub-maker).
-* [ ] Generate PDF (puppeteer, pdfmake, or pdf-lib).
 * [ ] Add remark-lint command to allow linting/spell-checking.
 * [ ] Support deploying to gh-pages.
 

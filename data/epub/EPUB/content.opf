@@ -1,0 +1,23 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" xml:lang="en">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    {{#if title}}<dc:title>{{ title }}</dc:title>{{/if}}
+    <dc:identifier id="pub-id">markbookdocs</dc:identifier>
+    {{#if language}}<dc:language>{{ language }}</dc:language>{{/if}}
+    {{#if creator}}<dc:creator>{{ creator }}</dc:creator>{{/if}}
+    {{#if description}}<description xmlns="http://purl.org/dc/elements/1.1/">{{ description }}</description>{{/if}}
+    <meta property="dcterms:modified">2019-01-01T12:00:00Z</meta>
+		<meta content="3.0.1" name="epubcheckversion"/>
+	</metadata>
+	<manifest>
+		{{#each items}}
+		<item media-type="application/xhtml+xml" id="item{{@index}}" href="{{this}}" />
+		{{/each}}
+		<item media-type="application/xhtml+xml" id="toc" properties="nav" href="toc.xhtml" />
+		<item media-type="application/x-dtbncx+xml" id="ncx" href="toc.ncx" />
+	</manifest>
+	<spine toc="ncx">
+	  {{#each items}}
+	  <itemref idref="item{{@index}}" />
+	  {{/each}}
+	</spine>
+</package>

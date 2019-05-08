@@ -62,7 +62,7 @@ const renderFiles = (config, processor, theme, files) => {
     .then(theme.copy)
 }
 
-export default function render (config) {
+export default function (config) {
   const files = [
     ...config.summary.prefix,
     ...config.summary.chapters,
