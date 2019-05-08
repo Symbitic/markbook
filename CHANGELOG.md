@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/Symbitic/markbook/compare/v1.5.0...v1.6.0) (2019-05-08)
+
+
+### Features
+
+* add print-to-pdf feature ([0ef714e](https://github.com/Symbitic/markbook/commit/0ef714e))
+* fix theme support in init ([0471fdf](https://github.com/Symbitic/markbook/commit/0471fdf))
+* support epub output ([d07c57f](https://github.com/Symbitic/markbook/commit/d07c57f))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/Symbitic/markbook/compare/v1.4.0...v1.5.0) (2019-04-24)
 
