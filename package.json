@@ -75,6 +75,7 @@
   ],
   "dependencies": {
     "archiver": "^3.0.0",
+    "axios": "^0.18.0",
     "chalk": "^2.4.1",
     "chokidar": "^2.1.5",
     "commander": "^2.20.0",
@@ -90,6 +91,7 @@
     "koa-send": "^5.0.0",
     "make-dir": "^3.0.0",
     "mdast-util-to-hast": "^5.0.0",
+    "plantuml-encoder": "^1.2.5",
     "puppeteer-core": "^1.15.0",
     "rehype-katex": "^1.2.0",
     "rehype-stringify": "^5.0.0",

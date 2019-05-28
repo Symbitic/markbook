@@ -7,6 +7,7 @@ import katex from 'rehype-katex'
 import math from 'remark-math'
 import markdown from 'remark-parse'
 import meta from 'remark-meta'
+import plantuml from './remark/remark-plantuml'
 import redirect from 'remark-redirect'
 import remark2rehype from 'remark-rehype'
 import supersub from 'remark-supersub'
@@ -23,6 +24,7 @@ const createProcessor = () =>
     .use(include)
     .use(math)
     .use(deflist)
+    .use(plantuml)
     .use(supersub)
     .use(meta)
     .use(bibliography)

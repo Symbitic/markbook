@@ -142,3 +142,16 @@ You can include other files by using `@include filename.md`. Once loaded, they a
 
 Recursive includes will result in an error, but one external file can include another one. That is, if `1.md` includes `2.md`, then `2.md` can still include `3.md`.
 
+## PlantUML Diagrams
+
+PlantUML diagrams can be rendered.
+
+    ```plantuml
+    Bob -> Alice : hello
+    ```
+
+results in:
+
+```plantuml
+Bob -> Alice : hello
+```
