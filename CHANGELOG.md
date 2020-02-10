@@ -1,6 +1,14 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.7.1](https://github.com/Symbitic/markbook/compare/v1.7.0...v1.7.1) (2020-02-10)
+
+
+### Bug Fixes
+
+* update axios and other dependencies ([d5391e8](https://github.com/Symbitic/markbook/commit/d5391e87c2a789c1b358a1b53a8fbc0369681df1))
+* update dependencies ([3c8e19c](https://github.com/Symbitic/markbook/commit/3c8e19ce10fce87f25b2f7a35325df110c3dca5f))
 
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/Symbitic/markbook/compare/v1.6.0...v1.7.0) (2019-05-28)
