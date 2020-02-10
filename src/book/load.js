@@ -1,4 +1,4 @@
-import cosmiconfig from 'cosmiconfig'
+import { cosmiconfig } from 'cosmiconfig'
 import fs from 'fs'
 import { reject } from '../common/errors'
 import util from 'util'
