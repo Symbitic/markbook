@@ -1,9 +1,9 @@
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 import { builtinModules } from 'module'
 import executable from 'rollup-plugin-executable'
-import json from 'rollup-plugin-json'
+import json from '@rollup/plugin-json'
 import pkg from './package.json'
-import resolve from 'rollup-plugin-node-resolve'
+import resolve from '@rollup/plugin-node-resolve'
 
 const external = [...builtinModules, ...Object.keys(pkg.dependencies)]
 
