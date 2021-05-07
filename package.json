@@ -80,7 +80,7 @@
     "chokidar": "^3.4.0",
     "commander": "^5.1.0",
     "cosmiconfig": "^6.0.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "hast-util-to-html": "^7.1.1",
     "husky": "^4.2.5",
     "inquirer": "^7.2.0",
